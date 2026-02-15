@@ -1,0 +1,86 @@
+---
+import DefaultLayout from '@layouts/DefaultLayout.astro'
+import { Heading, Link } from 'accessible-astro-components'
+import { Icon } from 'astro-icon/components'
+---
+
+<DefaultLayout title="Presentación - Einny Camyla Poveda Garcia">
+  <section class="my-32">
+    <div class="container space-content">
+      
+      <Heading level="h1" class="text-gradient">
+        Presentación
+      </Heading>
+
+      <p class="text-2xl">
+        Hola 👋 Soy <strong>Einny Camyla Poveda Garcia</strong>, estudiante apasionada por el desarrollo web y el diseño digital.
+      </p>
+
+      <p>
+        Me enfoco en crear soluciones modernas, accesibles y funcionales utilizando tecnologías actuales.
+        Disfruto transformar ideas en experiencias digitales atractivas y bien estructuradas.
+      </p>
+
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 my-24">
+        
+        <div class="card">
+          <Heading level="h2">🎯 Objetivo Profesional</Heading>
+          <p>
+            Seguir creciendo como desarrolladora, participar en proyectos innovadores
+            y aportar soluciones creativas que generen impacto.
+          </p>
+        </div>
+
+        <div class="card">
+          <Heading level="h2">💻 Habilidades</Heading>
+          <ul>
+            <li>✔ HTML, CSS y JavaScript</li>
+            <li>✔ Astro y Tailwind</li>
+            <li>✔ Diseño Responsivo</li>
+            <li>✔ Buenas prácticas de accesibilidad</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="flex gap-4 flex-wrap">
+        <Link
+          href="/blog"
+          isButton
+          type="primary"
+          animateOnHover
+          animationType="boop"
+        >
+          <Icon aria-hidden="true" name="lucide:folder" size="1.5rem" />
+          Ver Evidencias
+        </Link>
+
+        <Link
+          href="/contact"
+          isButton
+          type="secondary"
+          animateOnHover
+          animationType="boop"
+        >
+          <Icon aria-hidden="true" name="lucide:mail" size="1.5rem" />
+          Contacto
+        </Link>
+      </div>
+
+    </div>
+  </section>
+</DefaultLayout>
+
+<style>
+  .text-gradient {
+    background: linear-gradient(315deg, #d648ff 25%, #00d1b7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .card {
+    border: 1px solid var(--border-color-subtle);
+    border-radius: var(--radius-md);
+    padding: var(--space-m);
+  }
+</style>

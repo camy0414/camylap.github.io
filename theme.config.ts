@@ -22,11 +22,12 @@ export default defineThemeConfig({
   navigation: {
     darkmode: true,
     items: [
-      {
-        type: 'link',
-        label: 'Presentación',
-        href: '/',
-      },
+     {
+  type: 'link',
+  label: 'Presentación',
+  href: '/presentacion',
+},
+
       {
         type: 'link',
         label: 'Evidencias',

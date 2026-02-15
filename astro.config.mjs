@@ -7,7 +7,7 @@ import sitemap from '@astrojs/sitemap'
 import tailwindcss from '@tailwindcss/vite'
 import { enhanceConfigForWorkspace } from './scripts/workspace-config.js'
 
-// Vite configuration with path aliases and SCSS settings
+
 const viteConfig = {
   css: {
     preprocessorOptions: {
@@ -35,12 +35,23 @@ const viteConfig = {
   },
 }
 
-// https://astro.build/config
+
 export default defineConfig({
   compressHTML: true,
-  site: 'https://camylap.github.io',
-  integrations: [compress(), icon(), mdx(), sitemap()],
+
+
+  site: 'https://camy0414.github.io',
+  base: '/camylap.github.io/',
+
+  integrations: [
+    compress(),
+    icon(),
+    mdx(),
+    sitemap()
+  ],
+
   vite: enhanceConfigForWorkspace(viteConfig),
+
   env: {
     schema: {
       BLOG_API_URL: envField.string({

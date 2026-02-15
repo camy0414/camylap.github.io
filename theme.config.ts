@@ -24,19 +24,15 @@ export default defineThemeConfig({
     items: [
       {
         type: 'link',
-        label: 'Home',
+        label: 'Presentación',
         href: '/',
       },
       {
         type: 'link',
-        label: 'Blog',
+        label: 'Evidencias',
         href: '/blog',
       },
-      {
-        type: 'link',
-        label: 'Portfolio',
-        href: '/portfolio',
-      },
+      
       {
         label: 'Features',
         type: 'dropdown',

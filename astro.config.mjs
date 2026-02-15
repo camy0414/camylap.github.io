@@ -37,6 +37,7 @@ const viteConfig = {
 export default defineConfig({
   compressHTML: true,
 
+  // IMPORTANTE: Como tu repo es camylap.github.io
   site: 'https://camylap.github.io',
 
   integrations: [

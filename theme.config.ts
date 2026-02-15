@@ -34,44 +34,6 @@ export default defineThemeConfig({
       },
       
       {
-        label: 'Features',
-        type: 'dropdown',
-        items: [
-          {
-            label: 'Accessibility statement',
-            href: '/accessibility-statement',
-          },
-          {
-            label: 'Accessible components',
-            href: '/accessible-components',
-          },
-          {
-            label: 'Accessible launcher',
-            href: '/accessible-launcher',
-          },
-          {
-            label: 'Color contrast checker',
-            href: '/color-contrast-checker',
-          },
-          {
-            label: 'Markdown page',
-            href: '/markdown-page',
-          },
-          {
-            label: 'MDX page',
-            href: '/mdx-page',
-          },
-          {
-            label: '404 page',
-            href: '/404',
-          },
-          {
-            label: 'Sitemap',
-            href: '/sitemap',
-          },
-        ],
-      },
-      {
         type: 'link',
         label: 'Contact',
         href: '/contact',
@@ -79,7 +41,7 @@ export default defineThemeConfig({
       {
         type: 'link',
         label: 'Go to our GitHub page, opens in new tab',
-        href: 'https://github.com/incluud/accessible-astro-starter',
+        href: 'https://github.com/camy0414',
         icon: 'lucide:github',
         external: true,
         excludeFromLauncher: true,

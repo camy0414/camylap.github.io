@@ -23,6 +23,7 @@ import { Icon } from 'astro-icon/components'
 
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 my-24">
         
+        <!-- Objetivo Profesional -->
         <div class="card">
           <Heading level="h2">🎯 Objetivo Profesional</Heading>
           <p>
@@ -31,39 +32,53 @@ import { Icon } from 'astro-icon/components'
           </p>
         </div>
 
+        <!-- Habilidades + Video -->
         <div class="card">
           <Heading level="h2">💻 Habilidades</Heading>
-          <ul>
+
+          <ul class="mb-6">
             <li>✔ HTML, CSS y JavaScript</li>
             <li>✔ Astro y Tailwind</li>
             <li>✔ Diseño Responsivo</li>
             <li>✔ Buenas prácticas de accesibilidad</li>
           </ul>
+
+          <video 
+            controls 
+            width="100%" 
+            class="rounded-lg shadow-lg"
+          >
+            <!-- IMPORTANTE: Como usas base -->
+            <source src="/camylap.github.io/videos/mi-video.mp4" type="video/mp4" />
+            Tu navegador no soporta el video.
+          </video>
+
         </div>
 
       </div>
 
+      <!-- Botones -->
       <div class="flex gap-4 flex-wrap">
         <Link
-          href="/blog"
+          href="/presentacion"
           isButton
           type="primary"
           animateOnHover
           animationType="boop"
         >
-          <Icon aria-hidden="true" name="lucide:folder" size="1.5rem" />
-          Ver Evidencias
+          <Icon aria-hidden="true" name="lucide:user" size="1.5rem" />
+          Presentación
         </Link>
 
         <Link
-          href="/contact"
+          href="/blog"
           isButton
           type="secondary"
           animateOnHover
           animationType="boop"
         >
-          <Icon aria-hidden="true" name="lucide:mail" size="1.5rem" />
-          Contacto
+          <Icon aria-hidden="true" name="lucide:folder" size="1.5rem" />
+          Ver Evidencias
         </Link>
       </div>
 

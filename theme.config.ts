@@ -12,6 +12,7 @@ export default defineThemeConfig({
       'An Accessible Starter Theme for Astro including several accessibility features and tools to help you build faster.',
     author: 'Incluud',
     image: previewImage, 
+  }
   colors: {
     primary: '#d648ff',
     secondary: '#00d1b7',

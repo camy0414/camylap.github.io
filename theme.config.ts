@@ -39,7 +39,7 @@ export default defineThemeConfig({
 {
   type: 'link',
   label: 'Inicio',
-  href: `${import.meta.env.BASE_URL}index`,
+  href: import.meta.env.BASE_URL,,
 },
       {
         type: 'link',

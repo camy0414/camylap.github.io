@@ -15,7 +15,7 @@ export default defineThemeConfig({
   colors: {
     primary: '#d648ff',
     secondary: '#00d1b7',
-    
+
     neutral: '#b9bec4',
     outline: '#ff4500',
   },
@@ -28,12 +28,11 @@ export default defineThemeConfig({
   href: `${import.meta.env.BASE_URL}presentacion`,
 },
 
-
-      {
-        type: 'link',
-        label: 'Evidencias',
-        href: `${import.meta.env.BASE_URL}evidencias`,
-      },
+{
+  type: 'link',
+  label: 'Evidencias',
+  href: `${import.meta.env.BASE_URL}evidencias`,
+},
       
 
       {

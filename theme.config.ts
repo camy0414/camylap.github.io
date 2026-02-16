@@ -36,11 +36,11 @@ export default defineThemeConfig({
 },
       
 
-      {
-        type: 'link',
-        label: 'Contact',
-        href: '/contact',
-      },
+{
+  type: 'link',
+  label: 'Inicio',
+  href: `${import.meta.env.BASE_URL}index`,
+},
       {
         type: 'link',
         label: 'Go to our GitHub page, opens in new tab',

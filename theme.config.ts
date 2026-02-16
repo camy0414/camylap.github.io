@@ -11,8 +11,7 @@ export default defineThemeConfig({
     description:
       'An Accessible Starter Theme for Astro including several accessibility features and tools to help you build faster.',
     author: 'Incluud',
-    image: previewImage, // Can also be a string e.g. '/social-preview-image.png',
-  },
+    image: previewImage, 
   colors: {
     primary: '#d648ff',
     secondary: '#00d1b7',
@@ -32,9 +31,10 @@ export default defineThemeConfig({
       {
         type: 'link',
         label: 'Evidencias',
-        href: '/blog',
+        href: `${import.meta.env.BASE_URL}evidencias`,
       },
       
+
       {
         type: 'link',
         label: 'Contact',

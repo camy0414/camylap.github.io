@@ -39,7 +39,7 @@ export default defineThemeConfig({
 {
   type: 'link',
   label: 'Inicio',
-  href: import.meta.env.BASE_URL,,
+  href: 'https://camy0414.github.io/camylap.github.io/',
 },
       {
         type: 'link',

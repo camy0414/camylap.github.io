@@ -4,7 +4,6 @@ import { Heading, Link } from 'accessible-astro-components'
 import { Icon } from 'astro-icon/components'
 ---
 
-
 <DefaultLayout title="Presentación - Einny Camyla Poveda Garcia">
   <section class="my-32">
     <div class="container space-content">
@@ -13,43 +12,33 @@ import { Icon } from 'astro-icon/components'
         Presentación
       </Heading>
 
-      <p class="text-2xl">
-       
-
-
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 my-24">
         
-        <!-- Objetivo Profesional -->
+        <!-- Sobre mí -->
         <div class="card">
           <Heading level="h3">✨Sobre mi✨</Heading>
-            <br><br/>
+          <br /><br />
           <p>
             📍Mi nombre es Einny Camyla Poveda Garcia, tengo 18 años.
-              <br><br/>
+            <br /><br />
             📍Me gustan los animalitos 🐶🐱.
-            <br><br/>
-            📍Este semestre me gustaria poder superarme academicamente 📚.
-              <br><br/>
+            <br /><br />
+            📍Este semestre me gustaría poder superarme académicamente 📚.
+            <br /><br />
             📍Soy una persona sociable y me encanta trabajar en equipo 𐦂𖨆𐀪𖠋𐀪𐀪.
-
-
           </p>
         </div>
 
-        <!-- Habilidades + Video -->
+        <!-- Video Presentación -->
         <div class="card">
           <Heading level="h3">💻✨Video Presentación✨💻</Heading>
-
-          <ul class="mb-6">
-
-          </ul>
 
           <video 
             controls 
             width="100%" 
-            class="rounded-lg shadow-lg"
+            class="rounded-lg shadow-lg mt-6"
           >
-            <!-- IMPORTANTE: Como usas base -->
+            <!-- IMPORTANTE: porque usas base -->
             <source src="/camylap.github.io/videos/mi-video.mp4" type="video/mp4" />
             Tu navegador no soporta el video.
           </video>
@@ -58,23 +47,12 @@ import { Icon } from 'astro-icon/components'
 
       </div>
 
-      <!-- Botones -->
-      <div class="flex gap-4 flex-wrap">
-        <Link
-          href="/presentacion"
-          isButton
-          type="primary"
-          animateOnHover
-          animationType="boop"
-        >
-          <Icon aria-hidden="true" name="lucide:user" size="1.5rem" />
-          Presentación
-        </Link>
-
+      <!-- Botón Evidencias -->
+      <div class="flex justify-center mt-12">
         <Link
           href="/blog"
           isButton
-          type="secondary"
+          type="primary"
           animateOnHover
           animationType="boop"
         >

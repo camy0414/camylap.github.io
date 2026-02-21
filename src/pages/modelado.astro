@@ -1,5 +1,7 @@
 ---
 import DefaultLayout from '@layouts/DefaultLayout.astro'
+import { Image } from 'astro:assets'
+import aerolinea from '@assets/img/aerolinea.drawio.png'
 ---
 
 <DefaultLayout title="Modelado - Einny Camyla">
@@ -13,7 +15,24 @@ import DefaultLayout from '@layouts/DefaultLayout.astro'
       
       <div class="bg-zinc-800 p-6 rounded-xl shadow-lg">
         <h2 class="text-xl font-semibold mb-2">Modelo 1</h2>
-        <p>Descripción de tu modelo.</p>
+        <p>Una aerolínea requiere una base de datos relacional para registrar sus
+operaciones. Las características del negocio son las siguientes:
+• La aerolínea tiene tres recursos principales: Aviones, pilotos y tripulación.
+• Los aviones tienen un código (número de cola), un tipo de avión y una base
+a donde pertenece y debe regresar cada número de horas.
+• Los pilotos tienen un código, nombre y horas de vuelo.
+• Los miembros de la tripulación tienen un código, nombre y teléfonos.
+• Pilotos y tripulación tienen una base a la que regresan después de cada
+jornada.
+• Los vuelos van desde un origen a un destino a una hora concreta y tiene un
+número de vuelo.
+36
+</p>
+<Image
+  src={aerolinea}
+  alt="Modelo ER Aerolínea"
+  class="rounded-lg w-full object-contain"
+/>
       </div>
 
       <div class="bg-zinc-800 p-6 rounded-xl shadow-lg">

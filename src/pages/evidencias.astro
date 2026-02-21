@@ -10,25 +10,36 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
     <h1 class="text-3xl font-bold mb-8">Evidencias</h1>
 
     <div class="space-y-6">
-      <div class="p-6 border rounded-xl shadow-sm">
-        <h2 class="text-xl font-semibold mb-2">📘 Modelado</h2>
-        <p>Próximamente subiré las evidencias del modelado de bases de datos.</p>
-      </div>
 
+
+      <a 
+        href="/modelado"
+        class="block p-6 border rounded-xl shadow-sm 
+               hover:shadow-lg hover:scale-[1.02] 
+               transition duration-300 cursor-pointer"
+      >
+        <h2 class="text-xl font-semibold mb-2">📘 Modelado</h2>
+        <p>Ver todos los trabajos y evidencias de modelado de bases de datos.</p>
+      </a>
+
+      <!-- NORMALIZACIÓN -->
       <div class="p-6 border rounded-xl shadow-sm">
         <h2 class="text-xl font-semibold mb-2">🧩 Normalización</h2>
         <p>Próximamente subiré ejercicios y ejemplos de normalización.</p>
       </div>
 
+      <!-- SQL -->
       <div class="p-6 border rounded-xl shadow-sm">
         <h2 class="text-xl font-semibold mb-2">💻 SQL</h2>
         <p>Consultas y prácticas desarrolladas en clase.</p>
       </div>
 
+      <!-- PROYECTO -->
       <div class="p-6 border rounded-xl shadow-sm">
         <h2 class="text-xl font-semibold mb-2">🚀 Proyecto</h2>
         <p>Documentación y avances del proyecto final.</p>
       </div>
+
     </div>
   </section>
 </DefaultLayout>

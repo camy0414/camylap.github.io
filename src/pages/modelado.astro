@@ -1,66 +1,123 @@
+```astro
 ---
 import DefaultLayout from '@layouts/DefaultLayout.astro'
 import { Image } from 'astro:assets'
+
 import aerolinea from '@assets/img/aerolinea.drawio.png'
 ---
 
 <DefaultLayout title="Modelado - Einny Camyla">
 
-  <section class="py-20 container max-w-5xl">
-    
-    <h1 class="text-5xl font-bold mb-16 text-center">
-      Modelado
-    </h1>
+  <section class="container max-w-6xl py-20">
 
-    <!-- MODELO 1 -->
-    <div class="p-[2px] rounded-3xl bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 mb-20 shadow-2xl">
-      
-      <div class="bg-zinc-900 p-10 rounded-3xl">
-        
-        <h2 class="text-2xl font-semibold mb-6">
-          Modelo 1
-        </h2>
+    <!-- TITULO -->
+    <div class="text-center mb-20">
+      <h1 class="text-5xl font-bold mb-4">
+        Modelado
+      </h1>
 
-        <p class="mb-10 leading-relaxed">
-          Una aerolínea requiere una base de datos relacional para registrar sus
-          operaciones. Las características del negocio son las siguientes:
-          <br /><br />
-          • La aerolínea tiene tres recursos principales: Aviones, pilotos y tripulación.
-          <br /><br />
-          • Los aviones tienen un código (número de cola), un tipo de avión y una base
-          a donde pertenece y debe regresar cada número de horas.
-          <br /><br />
-          • Los pilotos tienen un código, nombre y horas de vuelo.
-          <br /><br />
-          • Los miembros de la tripulación tienen un código, nombre y teléfonos.
-          <br /><br />
-          • Pilotos y tripulación tienen una base a la que regresan después de cada jornada.
-          <br /><br />
-          • Los vuelos van desde un origen a un destino a una hora concreta y tiene un número de vuelo.
-        </p>
+      <p class="text-zinc-400 text-lg">
+        Modelos entidad-relación desarrollados para distintos casos de estudio.
+      </p>
+    </div>
 
-        <div class="bg-white p-6 rounded-xl shadow-lg">
-          <Image
-            src={aerolinea}
-            alt="Modelo ER Aerolínea"
-            class="w-full object-contain rounded-lg"
-          />
+    <!-- GRID DE MODELOS -->
+    <div class="grid gap-16">
+
+      <!-- MODELO 1 -->
+      <article class="p-[2px] rounded-3xl bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 shadow-2xl">
+
+        <div class="bg-zinc-900 rounded-3xl p-10">
+
+          <!-- HEADER -->
+          <div class="mb-8">
+            <span class="text-sm uppercase tracking-widest text-pink-400">
+              Base de Datos
+            </span>
+
+            <h2 class="text-3xl font-bold mt-2">
+              Modelo 1 — Aerolínea
+            </h2>
+          </div>
+
+          <!-- DESCRIPCION -->
+          <div class="space-y-5 text-zinc-300 leading-relaxed">
+
+            <p>
+              Una aerolínea requiere una base de datos relacional para registrar
+              sus operaciones.
+            </p>
+
+            <ul class="list-disc pl-6 space-y-3">
+              <li>
+                La aerolínea tiene tres recursos principales:
+                <strong>aviones, pilotos y tripulación.</strong>
+              </li>
+
+              <li>
+                Los aviones tienen un código (número de cola), un tipo de avión
+                y una base a donde pertenece y debe regresar cada número de horas.
+              </li>
+
+              <li>
+                Los pilotos tienen un código, nombre y horas de vuelo.
+              </li>
+
+              <li>
+                Los miembros de la tripulación tienen un código, nombre y teléfonos.
+              </li>
+
+              <li>
+                Pilotos y tripulación tienen una base a la que regresan después
+                de cada jornada.
+              </li>
+
+              <li>
+                Los vuelos van desde un origen a un destino a una hora concreta
+                y tienen un número de vuelo.
+              </li>
+            </ul>
+
+          </div>
+
+          <!-- IMAGEN -->
+          <div class="mt-12 bg-white rounded-2xl p-6 shadow-lg">
+            <Image
+              src={aerolinea}
+              alt="Modelo ER Aerolínea"
+              class="w-full rounded-xl object-contain"
+            />
+          </div>
+
         </div>
+      </article>
 
-      </div>
+      <!-- MODELO 2 -->
+      <article class="p-[2px] rounded-3xl bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 shadow-2xl">
+
+        <div class="bg-zinc-900 rounded-3xl p-10">
+
+          <div class="mb-8">
+            <span class="text-sm uppercase tracking-widest text-cyan-400">
+              Base de Datos
+            </span>
+
+            <h2 class="text-3xl font-bold mt-2">
+              Modelo 2
+            </h2>
+          </div>
+
+          <p class="text-zinc-300 leading-relaxed">
+            Aquí puedes agregar otro modelo entidad-relación junto con su
+            descripción e imagen correspondiente.
+          </p>
+
+        </div>
+      </article>
 
     </div>
-
-
-    <!--
-    <div class="p-[2px] rounded-3xl bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 mb-20 shadow-2xl">
-      <div class="bg-zinc-900 p-10 rounded-3xl">
-        <h2 class="text-2xl font-semibold mb-6">Modelo 2</h2>
-        <p class="mb-10">Descripción del modelo...</p>
-      </div>
-    </div>
-    -->
 
   </section>
 
 </DefaultLayout>
+```

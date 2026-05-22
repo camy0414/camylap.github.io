@@ -4,6 +4,7 @@ import { Image } from 'astro:assets'
 
 import aerolinea from '@assets/img/aerolinea.drawio.png'
 import residuos from '@assets/img/Residuos.png'
+import modelo3 from '@assets/img/modelo3.png'
 ---
 
 <DefaultLayout title="Modelado - Einny Camyla">
@@ -76,6 +77,8 @@ import residuos from '@assets/img/Residuos.png'
           </ul>
 
         </div>
+
+        <!-- IMAGEN -->
         <div class="bg-white p-6 rounded-xl shadow-lg mt-10">
           <Image
             src={aerolinea}
@@ -92,51 +95,125 @@ import residuos from '@assets/img/Residuos.png'
 
       <div class="bg-zinc-900 p-10 rounded-3xl">
 
+        <!-- HEADER -->
         <div class="mb-8">
           <span class="text-sm uppercase tracking-widest text-cyan-400">
             Base de Datos
           </span>
 
           <h2 class="text-3xl font-bold mt-2 text-white">
-            Modelo 2
+            Modelo 2 — Residuos Tóxicos
           </h2>
         </div>
 
-        <p class="text-zinc-300 leading-relaxed">
-          LOS RESIDUOS TÓXICOS
-          <br>
-          7.1. ENUNCIADO DEL PROBLEMA
-          <br>
-          Se desea abordar la problemática ambiental de los residuos tóxicos y peligrosos cuya incorrecta gestión produce daños de gran importancia en el medio ambiente y en la salud del ser humano. La información a contemplar es la que corresponde desde que es producido el residuo por un centro o empresa productora hasta que éste se encuentra en un lugar seguro, en donde recibe un tratamiento especial como puede ser la incineración, almacenamiento en depósitos de seguridad, etc. En el sistema de información se desea considerar la información de los productores de residuos, los residuos, las empresas que transportan los residuos hasta los lugares seguros y el traslado de los residuos teniendo en cuenta el tipo de transporte, el envase, etc.
-          <br>SUPUESTO 1:Una empresa productora produce un número amplio de residuos constituidos por un número variable de constituyentes químicos.
-          <br>SUPUESTO 2:Más de una empresa productora puede producir residuos con igual número de constituyentes químicos y con las mismas o distintas cantidades.
-          <br>SUPUESTO 3:Las empresas productoras asignan un código único a los residuos que producen, lo que les permite diferenciar distintas producciones de los mismos productos. Además, más de una empresa puede asignar el mismo código a los residuos que produce.
-          <br>SUPUESTO 4:Los residuos pueden ser trasladados en su totalidad (cantidad total del mismo) o en partes, o no ser trasladados nunca.
-          <br>SUPUESTO 5:En cada traslado de residuos la cantidad que se traslada de los mismos es enviada a un único destino.
-          <br>SUPUESTO 6:En una misma fecha las empresas productoras pueden ordenar más de un traslado de un mismo o distinto residuo (cantidades parciales del mismo) a un mismo o distinto destino.
-          <br>SUPUESTO 7:En cada traslado puede intervenir más de una empresa transportista usando el mismo o distinto transporte, por lo que resulta interesante conocer tanto el medio de transporte utilizado como los kilómetros realizados, así como el coste del trabajo.
-          <br>SUPUESTO 8:El residuo se traslada en un tipo de envase determinado por la empresa productora y que no varía a lo largo de su traslado.
-          <br>SUPUESTO 9:Es interesante conocer la fecha de llegada a destino y el tratamiento a que se someten los residuos una vez alcanzado el mismo.
-          <br>SUPUESTO 10:Por seguridad se considera que en un traslado sólo puede trasladarse un residuo de una empresa productora.
-        </p>
+        <!-- TEXTO -->
+        <div class="space-y-5 text-zinc-300 leading-relaxed">
+
+          <p>
+            <strong class="text-white">7.1. ENUNCIADO DEL PROBLEMA</strong>
+          </p>
+
+          <p>
+            Se desea abordar la problemática ambiental de los residuos tóxicos y peligrosos cuya incorrecta gestión produce daños de gran importancia en el medio ambiente y en la salud del ser humano.
+          </p>
+
+          <p>
+            La información a contemplar corresponde desde que es producido el residuo por un centro o empresa productora hasta que éste se encuentra en un lugar seguro, en donde recibe un tratamiento especial como puede ser la incineración, almacenamiento en depósitos de seguridad, etc.
+          </p>
+
+          <p>
+            En el sistema de información se desea considerar la información de:
+          </p>
+
+          <ul class="list-disc pl-6 space-y-3">
+            <li>Los productores de residuos.</li>
+            <li>Los residuos.</li>
+            <li>Las empresas transportadoras.</li>
+            <li>Los traslados y tratamientos realizados.</li>
+          </ul>
+
+          <div class="mt-8">
+            <h3 class="text-xl font-semibold text-white mb-4">
+              Supuestos del problema
+            </h3>
+
+            <ul class="list-disc pl-6 space-y-4">
+
+              <li>
+                Una empresa productora produce un número amplio de residuos constituidos por un número variable de constituyentes químicos.
+              </li>
+
+              <li>
+                Más de una empresa productora puede producir residuos con igual número de constituyentes químicos y con las mismas o distintas cantidades.
+              </li>
+
+              <li>
+                Las empresas productoras asignan un código único a los residuos que producen, permitiendo diferenciar distintas producciones.
+              </li>
+
+              <li>
+                Los residuos pueden ser trasladados en su totalidad, parcialmente o incluso no ser trasladados nunca.
+              </li>
+
+              <li>
+                En cada traslado la cantidad enviada tiene un único destino.
+              </li>
+
+              <li>
+                En una misma fecha las empresas productoras pueden ordenar más de un traslado de un mismo o distinto residuo.
+              </li>
+
+              <li>
+                En cada traslado puede intervenir más de una empresa transportista utilizando distintos medios de transporte.
+              </li>
+
+              <li>
+                El residuo se traslada en un tipo de envase determinado por la empresa productora.
+              </li>
+
+              <li>
+                Es importante conocer la fecha de llegada y el tratamiento aplicado al residuo.
+              </li>
+
+              <li>
+                Por seguridad, en un traslado sólo puede transportarse un residuo de una empresa productora.
+              </li>
+
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- IMAGEN -->
         <div class="bg-white p-6 rounded-xl shadow-lg mt-10">
           <Image
             src={residuos}
-            alt="Modelo ER Aerolínea"
+            alt="Modelo ER Residuos"
             class="w-full object-contain rounded-lg"
           />
         </div>
-        <p>Ingreso al ejercicio en draw: -->https://drive.google.com/file/d/18cFeP9F3HFqef52bL8cAcNfVfMyMgXfb/view?usp=sharing</p>
 
+        <!-- LINK -->
+        <p class="mt-6 text-zinc-300">
+          Ingreso al ejercicio en Draw.io:
+          <a
+            href="https://drive.google.com/file/d/18cFeP9F3HFqef52bL8cAcNfVfMyMgXfb/view?usp=sharing"
+            target="_blank"
+            class="text-cyan-400 hover:underline"
+          >
+            Ver archivo
+          </a>
+        </p>
 
       </div>
+    </div>
 
-      <div class="p-[2px] rounded-3xl bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 mb-20 shadow-2xl">
+    <!-- MODELO 3 -->
+    <div class="p-[2px] rounded-3xl bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 mb-20 shadow-2xl">
 
       <div class="bg-zinc-900 p-10 rounded-3xl">
-
         <div class="mb-8">
-          <span class="text-sm uppercase tracking-widest text-cyan-400">
+          <span class="text-sm uppercase tracking-widest text-emerald-400">
             Base de Datos
           </span>
 
@@ -145,21 +222,40 @@ import residuos from '@assets/img/Residuos.png'
           </h2>
         </div>
 
-        <p class="text-zinc-300 leading-relaxed">
-          LOS RESIDUOS TÓXICOS
-          <br>
-          7.1. ENUNCIADO DEL PROBLEMA
-          
-        </p>
+        <div class="space-y-5 text-zinc-300 leading-relaxed">
+
+          <p>
+            Aquí puedes escribir la descripción del tercer modelo.
+          </p>
+
+          <ul class="list-disc pl-6 space-y-3">
+            <li>Primer requisito del modelo.</li>
+            <li>Segundo requisito del modelo.</li>
+            <li>Tercer requisito del modelo.</li>
+          </ul>
+
+        </div>
+
+        <!-- IMAGEN -->
         <div class="bg-white p-6 rounded-xl shadow-lg mt-10">
           <Image
-            src={residuos}
-            alt="Modelo ER Aerolínea"
+            src={modelo3}
+            alt="Modelo 3"
             class="w-full object-contain rounded-lg"
           />
         </div>
-        <p>Ingreso al ejercicio en draw: -->https://drive.google.com/file/d/18cFeP9F3HFqef52bL8cAcNfVfMyMgXfb/view?usp=sharing</p>
 
+        <!-- LINK -->
+        <p class="mt-6 text-zinc-300">
+          Ingreso al ejercicio:
+          <a
+            href="#"
+            target="_blank"
+            class="text-emerald-400 hover:underline"
+          >
+            Ver archivo
+          </a>
+        </p>
 
       </div>
     </div>
@@ -167,3 +263,4 @@ import residuos from '@assets/img/Residuos.png'
   </section>
 
 </DefaultLayout>
+```

@@ -20,698 +20,292 @@ import mer from '@assets/img/mer.png'
 import mere from '@assets/img/mere.png'
 ---
 
-<DefaultLayout title="Modelado - Einny Camyla">
+<DefaultLayout title="Normalización - Einny Camyla">
 
   <section class="py-20 container max-w-5xl mx-auto">
 
     <!-- TITULO -->
     <div class="text-center mb-16">
       <h1 class="text-5xl font-bold mb-4 text-white">
-        Modelado
+        NORMALIZACIÓN
       </h1>
 
       <p class="text-zinc-400 text-lg">
-        Modelos entidad-relación desarrollados para distintos casos de estudio.
+        Normalización talleres y ejercicios en clase
       </p>
     </div>
 
-    <!-- MODELO 1 -->
-    <div class="p-[2px] rounded-3xl bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 mb-20 shadow-2xl">
+ ---
+// TallerNormalizacion.astro
+// Agrega este bloque dentro del <section> en tu página de Normalización,
+// justo antes del cierre de </section>
+---
 
-      <div class="bg-zinc-900 p-10 rounded-3xl">
+<!-- TALLER DE NORMALIZACIÓN -->
+<div class="p-[2px] rounded-3xl bg-gradient-to-r from-violet-600 via-purple-500 to-fuchsia-500 mb-20 shadow-2xl">
+  <div class="bg-zinc-900 p-10 rounded-3xl">
 
-        <!-- HEADER -->
-        <div class="mb-8">
-          <span class="text-sm uppercase tracking-widest text-pink-400">
-            Base de Datos
-          </span>
+    <!-- HEADER -->
+    <div class="mb-10">
+      <span class="text-sm uppercase tracking-widest text-violet-400">
+        Taller Evaluativo · Universidad El Bosque
+      </span>
+      <h2 class="text-3xl font-bold mt-2 text-white">
+        Taller de Normalización de BD
+      </h2>
+      <p class="text-zinc-400 mt-2 text-sm">
+        Docente: Ing. Christian Felipe Duarte Arévalo · Bases de Datos 1
+      </p>
+    </div>
 
-          <h2 class="text-3xl font-bold mt-2 text-white">
-            Modelo 1 — Aerolínea
-          </h2>
-        </div>
+    <!-- EJERCICIO 1 -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="px-3 py-1 rounded-full bg-violet-500/20 text-violet-300 text-xs font-semibold uppercase tracking-wider">Ejercicio 1</span>
+        <h3 class="text-xl font-semibold text-white">Tabla de Proyectos y Empleados</h3>
+      </div>
 
-        <!-- TEXTO -->
-        <div class="space-y-5 text-zinc-300 leading-relaxed">
+      <p class="text-zinc-300 mb-6 leading-relaxed">
+        Se analiza la siguiente tabla que registra la asignación de empleados a proyectos,
+        identificando su forma normal actual y normalizándola hasta la 3FN.
+      </p>
 
-          <p>
-            Una aerolínea requiere una base de datos relacional para registrar
-            sus operaciones.
-          </p>
+      <!-- Tabla 1 -->
+      <div class="overflow-x-auto rounded-xl border border-zinc-700 mb-6">
+        <table class="w-full text-sm text-zinc-300">
+          <thead>
+            <tr class="bg-zinc-800 text-violet-300 text-xs uppercase tracking-wider">
+              <th class="px-4 py-3 text-left">cod_proyecto</th>
+              <th class="px-4 py-3 text-left">nom_proyecto</th>
+              <th class="px-4 py-3 text-left">cod_empleado</th>
+              <th class="px-4 py-3 text-left">nom_empleado</th>
+              <th class="px-4 py-3 text-left">profesion</th>
+              <th class="px-4 py-3 text-left">vlr_hora</th>
+              <th class="px-4 py-3 text-left">hrs_asignadas</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-zinc-800">
+            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">1010</td><td class="px-4 py-2">ERP</td><td class="px-4 py-2">2010</td><td class="px-4 py-2">Sandra</td><td class="px-4 py-2">Ingeniero</td><td class="px-4 py-2">100.000</td><td class="px-4 py-2">20</td></tr>
+            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2 text-zinc-500">—</td><td class="px-4 py-2">ERP</td><td class="px-4 py-2">2020</td><td class="px-4 py-2">Claudia</td><td class="px-4 py-2">Analista</td><td class="px-4 py-2">50.000</td><td class="px-4 py-2">10</td></tr>
+            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">1010</td><td class="px-4 py-2">ERP</td><td class="px-4 py-2">2030</td><td class="px-4 py-2">Yamyle</td><td class="px-4 py-2">Programador</td><td class="px-4 py-2">20.000</td><td class="px-4 py-2">10</td></tr>
+            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">1020</td><td class="px-4 py-2">CRM</td><td class="px-4 py-2">2010</td><td class="px-4 py-2">Sandra</td><td class="px-4 py-2">Ingeniero</td><td class="px-4 py-2">100.000</td><td class="px-4 py-2">10</td></tr>
+            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">1020</td><td class="px-4 py-2 text-zinc-500">—</td><td class="px-4 py-2">2020</td><td class="px-4 py-2">Claudia</td><td class="px-4 py-2">Analista</td><td class="px-4 py-2">50.000</td><td class="px-4 py-2">15</td></tr>
+            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2 text-zinc-500">—</td><td class="px-4 py-2">CRM</td><td class="px-4 py-2">2030</td><td class="px-4 py-2">Yamile</td><td class="px-4 py-2">Programador</td><td class="px-4 py-2">20.000</td><td class="px-4 py-2">20</td></tr>
+            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">1030</td><td class="px-4 py-2">BI</td><td class="px-4 py-2">2010</td><td class="px-4 py-2">Sandra</td><td class="px-4 py-2">Ingeniero</td><td class="px-4 py-2">100.000</td><td class="px-4 py-2">10</td></tr>
+            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2 text-zinc-500">—</td><td class="px-4 py-2">BI</td><td class="px-4 py-2">2020</td><td class="px-4 py-2">Claudia</td><td class="px-4 py-2">Analista</td><td class="px-4 py-2">50.000</td><td class="px-4 py-2">15</td></tr>
+            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">1030</td><td class="px-4 py-2 text-zinc-500">—</td><td class="px-4 py-2">2030</td><td class="px-4 py-2">Llamile</td><td class="px-4 py-2">Programador</td><td class="px-4 py-2">20.000</td><td class="px-4 py-2">10</td></tr>
+            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">1010</td><td class="px-4 py-2">ERP</td><td class="px-4 py-2">2040</td><td class="px-4 py-2">Andrea</td><td class="px-4 py-2">Ingeniero</td><td class="px-4 py-2">100.000</td><td class="px-4 py-2">40</td></tr>
+          </tbody>
+        </table>
+      </div>
 
-          <ul class="list-disc pl-6 space-y-3">
-            <li>
-              La aerolínea tiene tres recursos principales:
-              <strong class="text-white"> aviones, pilotos y tripulación.</strong>
-            </li>
-
-            <li>
-              Los aviones tienen un código (número de cola), un tipo de avión y
-              una base a donde pertenece y debe regresar cada número de horas.
-            </li>
-
-            <li>
-              Los pilotos tienen un código, nombre y horas de vuelo.
-            </li>
-
-            <li>
-              Los miembros de la tripulación tienen un código, nombre y teléfonos.
-            </li>
-
-            <li>
-              Pilotos y tripulación tienen una base a la que regresan después
-              de cada jornada.
-            </li>
-
-            <li>
-              Los vuelos van desde un origen a un destino a una hora concreta y
-              tienen un número de vuelo.
-            </li>
-          </ul>
-
-        </div>
-
-        <!-- IMAGEN -->
-        <div class="bg-white p-6 rounded-xl shadow-lg mt-10">
-          <Image
-            src={aerolinea}
-            alt="Modelo ER Aerolínea"
-            class="w-full object-contain rounded-lg"
-          />
-        </div>
-
-        <!-- LINK -->
-        <p class="mt-6 text-zinc-300">
-          Ingreso al ejercicio:
-          <a
-            href="https://drive.google.com/file/d/18cFeP9F3HFqef52bL8cAcNfVfMyMgXfb/view?usp=sharing"
-            target="_blank"
-            class="text-pink-400 hover:underline"
-          >
-            Ver archivo
-          </a>
-        </p>
-
+      <div class="space-y-4 text-zinc-300 text-sm leading-relaxed bg-zinc-800/40 rounded-xl p-6 border border-zinc-700">
+        <p class="font-semibold text-white">Preguntas a resolver:</p>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>Indicar en qué forma normal se encuentra la tabla. Justificar la respuesta.</li>
+          <li>Especificar el paso a paso para convertir la Tabla No. 1 a la <span class="text-violet-300 font-semibold">3FN</span>, mostrando cada etapa del proceso de normalización y justificando claramente cada decisión tomada.</li>
+        </ul>
       </div>
     </div>
 
-    <!-- MODELO 2 -->
-    <div class="p-[2px] rounded-3xl bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 mb-20 shadow-2xl">
+    <!-- EJERCICIO 2 -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="px-3 py-1 rounded-full bg-fuchsia-500/20 text-fuchsia-300 text-xs font-semibold uppercase tracking-wider">Ejercicio 2</span>
+        <h3 class="text-xl font-semibold text-white">Tabla de Estudiantes — 1NF</h3>
+      </div>
 
-      <div class="bg-zinc-900 p-10 rounded-3xl">
+      <p class="text-zinc-300 mb-6 leading-relaxed">
+        Análisis de la tabla de estudiantes para determinar si cumple la Primera Forma Normal
+        y rediseño de las tablas resultantes si es necesario.
+      </p>
 
-        <!-- HEADER -->
-        <div class="mb-8">
-          <span class="text-sm uppercase tracking-widest text-cyan-400">
-            Base de Datos
-          </span>
+      <div class="overflow-x-auto rounded-xl border border-zinc-700 mb-6">
+        <table class="w-full text-sm text-zinc-300">
+          <thead>
+            <tr class="bg-zinc-800 text-fuchsia-300 text-xs uppercase tracking-wider">
+              <th class="px-4 py-3 text-left">Cod</th>
+              <th class="px-4 py-3 text-left">Name</th>
+              <th class="px-4 py-3 text-left">Email</th>
+              <th class="px-4 py-3 text-left">Courses</th>
+              <th class="px-4 py-3 text-left">GradePoints</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-zinc-800">
+            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">100111</td><td class="px-4 py-2">John Doe</td><td class="px-4 py-2">doe@usna.edu</td><td class="px-4 py-2 text-amber-400">NN204, SI204, IT221</td><td class="px-4 py-2 text-amber-400">2, 3, 3</td></tr>
+            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">092244</td><td class="px-4 py-2">Matt Smith</td><td class="px-4 py-2">smith@usna.edu</td><td class="px-4 py-2 text-amber-400">SM223, EE301</td><td class="px-4 py-2 text-amber-400">4, 4</td></tr>
+            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">113221</td><td class="px-4 py-2">Melinda Black</td><td class="px-4 py-2">black@usna.edu</td><td class="px-4 py-2">SI204</td><td class="px-4 py-2">3</td></tr>
+            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">090112</td><td class="px-4 py-2">Tom Johnson</td><td class="px-4 py-2">johnson@usna.edu</td><td class="px-4 py-2 text-amber-400">NN204, SI204, IT221</td><td class="px-4 py-2 text-amber-400">4, 2, 3</td></tr>
+          </tbody>
+        </table>
+      </div>
 
-          <h2 class="text-3xl font-bold mt-2 text-white">
-            Modelo 2 — Residuos Tóxicos
-          </h2>
-        </div>
+      <div class="flex items-start gap-2 bg-amber-500/10 border border-amber-500/30 rounded-xl p-4 mb-4 text-sm text-amber-200">
+        <span class="text-amber-400 font-bold mt-0.5">⚠</span>
+        <p>Las columnas <strong>Courses</strong> y <strong>GradePoints</strong> contienen valores multivaluados (múltiples cursos y notas en una sola celda), lo que viola la 1NF.</p>
+      </div>
 
-        <!-- TEXTO -->
-        <div class="space-y-5 text-zinc-300 leading-relaxed">
-
-          <p>
-            LOS RESIDUOS TÓXICOS
-            <br> 7.1. ENUNCIADO DEL PROBLEMA
-            <br> Se desea abordar la problemática ambiental de los residuos tóxicos y peligrosos cuya incorrecta gestión produce daños de gran importancia en el medio ambiente y en la salud del ser humano. La información a contemplar es la que corresponde desde que es producido el residuo por un centro o empresa productora hasta que éste se encuentra en un lugar seguro, en donde recibe un tratamiento especial como puede ser la incineración, almacenamiento en depósitos de seguridad, etc. En el sistema de información se desea considerar la información de los productores de residuos, los residuos, las empresas que transportan los residuos hasta los lugares seguros y el traslado de los residuos teniendo en cuenta el tipo de transporte, el envase, etc.
-            <br>SUPUESTO 1:Una empresa productora produce un número amplio de residuos constituidos por un número variable de constituyentes químicos.
-            <br>SUPUESTO 2:Más de una empresa productora puede producir residuos con igual número de constituyentes químicos y con las mismas o distintas cantidades.
-            <br>SUPUESTO 3:Las empresas productoras asignan un código único a los residuos que producen, lo que les permite diferenciar distintas producciones de los mismos productos. Además, más de una empresa puede asignar el mismo código a los residuos que produce.
-            <br>SUPUESTO 4:Los residuos pueden ser trasladados en su totalidad (cantidad total del mismo) o en partes, o no ser trasladados nunca.
-            <br>SUPUESTO 5:En cada traslado de residuos la cantidad que se traslada de los mismos es enviada a un único destino.
-            <br>SUPUESTO 6:En una misma fecha las empresas productoras pueden ordenar más de un traslado de un mismo o distinto residuo (cantidades parciales del mismo) a un mismo o distinto destino.
-            <br>SUPUESTO 7:En cada traslado puede intervenir más de una empresa transportista usando el mismo o distinto transporte, por lo que resulta interesante conocer tanto el medio de transporte utilizado como los kilómetros realizados, así como el coste del trabajo.
-            <br>SUPUESTO 8:El residuo se traslada en un tipo de envase determinado por la empresa productora y que no varía a lo largo de su traslado.
-            <br>SUPUESTO 9:Es interesante conocer la fecha de llegada a destino y el tratamiento a que se someten los residuos una vez alcanzado el mismo.
-            <br>SUPUESTO 10:Por seguridad se considera que en un traslado sólo puede trasladarse un residuo de una empresa productora.
-          </p>
-
-        </div>
-
-        <!-- IMAGEN -->
-        <div class="bg-white p-6 rounded-xl shadow-lg mt-10">
-          <Image
-            src={residuos}
-            alt="Modelo ER Residuos"
-            class="w-full object-contain rounded-lg"
-          />
-        </div>
-
-        <!-- LINK -->
-        <p class="mt-6 text-zinc-300">
-          Ingreso al ejercicio en Draw.io:
-          <a
-            href="https://drive.google.com/file/d/18cFeP9F3HFqef52bL8cAcNfVfMyMgXfb/view?usp=sharing"
-            target="_blank"
-            class="text-cyan-400 hover:underline"
-          >
-            Ver archivo
-          </a>
-        </p>
-
+      <div class="space-y-4 text-zinc-300 text-sm leading-relaxed bg-zinc-800/40 rounded-xl p-6 border border-zinc-700">
+        <p class="font-semibold text-white">Preguntas a resolver:</p>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>¿La tabla de Estudiantes está en 1NF? ¿Por qué?</li>
+          <li>Si no está en 1NF, rediseñar las tablas resultantes indicando nombre de tabla, columnas, llaves primarias y llaves foráneas.</li>
+        </ul>
       </div>
     </div>
 
-    <!-- MODELO 3 -->
-    <div class="p-[2px] rounded-3xl bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 mb-20 shadow-2xl">
+    <!-- EJERCICIO 3 -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="px-3 py-1 rounded-full bg-pink-500/20 text-pink-300 text-xs font-semibold uppercase tracking-wider">Ejercicio 3</span>
+        <h3 class="text-xl font-semibold text-white">Restaurante — Cenas de Empresa (Member_Dinner)</h3>
+      </div>
 
-      <div class="bg-zinc-900 p-10 rounded-3xl">
-        <div class="mb-8">
-          <span class="text-sm uppercase tracking-widest text-emerald-400">
-            Base de Datos
-          </span>
+      <p class="text-zinc-300 mb-6 leading-relaxed">
+        El gerente del restaurante nocturno necesita un sistema para planificar cenas y
+        registrar asistencia. La clave primaria de la tabla es <span class="text-pink-300 font-mono text-xs bg-zinc-800 px-2 py-0.5 rounded">Número de miembro + Número de cena</span>.
+        Las cenas pueden tener múltiples platos.
+      </p>
 
-          <h2 class="text-3xl font-bold mt-2 text-white">
-            Modelo 3
-          </h2>
-        </div>
-
-        <div class="space-y-5 text-zinc-300 leading-relaxed">
-
-          <p>COMIDAS A DOMICILIO
-          <br> 14.1. ENUNCIADO DEL PROBLEMA
-          <br>Eat’n Go, una empresa internacional dedicada a la comercialización de comidas rápidas, tiene la intención de ubicar una franquicia en nuestra localidad, siéndole necesario informatizar la gestión del negocio adaptándolo a las características propias de la clientela esperada. Esta empresa se dedica a la venta de pizzas y bocadillos, además de productos complementarios como refrescos, helados, etc.
-          <br>Según las especificaciones aportadas por esta empresa se sabe que:
-          <br>SUPUESTO 1: Tanto las pizzas como los bocadillos pueden condimentarse con un número de ingredientes de entre un conjunto de ellos con los que trabaja la empresa.
-          <br>SUPUESTO 2: Los ingredientes con los que se hacen los bocadillos pueden ser iguales o distintos a aquellos con los que se hacen las pizzas.
-          <br>SUPUESTO 3: El número de ingredientes que intervienen en un artículo que se vende (pizza o bocadillo) no está delimitado, pudiendo realizarse una venta de estos artículos sin ningún ingrediente. Es decir, la empresa vende también las bases de las pizzas y el pan con los que prepara las pizzas y los bocadillos, respectivamente.
-          <br>SUPUESTO 4: Cada artículo que vende la empresa (pizzas, bocadillos y productos complementarios) tiene un precio base asignado (el precio de estos productos cuando se venden de forma independiente), sin contar los ingredientes que pueden acompañar a alguno de estos tipos de artículos.
-          <br>SUPUESTO 5: Cada ingrediente tiene un precio para los bocadillos, mientras que para las pizzas todos los ingredientes tienen el mismo precio (los productos complementarios no llevan ingredientes).
-          <br>SUPUESTO 6: Los artículos se pueden vender en distinto tamaño, en cuyo caso el precio base es distinto según el tamaño, y el precio de los ingredientes también. Existen, actualmente, tres tamaños en los que se venden los bocadillos y las pizzas (pequeño, normal y grande).
-          <br>SUPUESTO 7: Las ventas se pueden hacer de tres formas diferentes: para consumir en el local, para recoger en el local y llevar o consumir en el mismo, y para servir a domicilio, en cuyo caso puede incrementarse un cargo añadido por el porte de la venta.
-          <br>SUPUESTO 8: Los artículos complementarios que vende la empresa tienen un precio fijo en base a su tipo, tamaño, sabor, etc.
-          <br>SUPUESTO 9: Los clientes pueden solicitar un servicio de la empresa (un pedido) tanto personalmente en el local como telefónicamente.
-          <br>SUPUESTO 10: En los pedidos telefónicos se tomarán los datos completos del cliente; en los de recoger sólo el documento nacional de identidad y su nombre completo, y en los de consumir en el local no se tomará ningún dato, a no ser que sea necesario por otras razones.
-          <br>SUPUESTO 11: A la empresa le interesa mantener información de todos los clientes a los que se les recoge información por dos razones:
-          Simplemente a escala informativa, de consumo y marketing.Para llevar el control del consumo y favorecer, mediante obsequios, a aquellos clientes que alcancen un cierto consumo.
-          <br>SUPUESTO 12: La empresa organiza, a veces, promociones para sus clientes. Éstas se basan en el obsequio de algún regalo o artículo de propaganda sobre la base de:
-          Las unidades consumidas de alguno de los tipos de artículos: pizzas o bocadillos.Cargo total alcanzado en los pedidos.
-          <br>SUPUESTO 13: Cuando la empresa obsequia a los clientes con algún artículo de promoción siempre recaba de los mismos toda su información y, además, mantiene información sobre los regalos de promoción que se les entrega para, a ser posible, no hacer entregas duplicadas de los mismos.
-          <br>SUPUESTO 14: La empresa cuenta con una serie de repartidores encargados del reparto a domicilio y de una batería de scooters para ayudarles en su cometido. Cada reparto se le asigna a un repartidor, el cual tiene asignado un scooter, aunque un mismo scooter puede ser utilizado por distintos repartidores (por supuesto en distintos turnos de trabajo).
-          <br>SUPUESTO 15: A la empresa le interesa conocer información del coste de los scooters sobre la base del consumo de gasolina de los mismos en la realización de los repartos.
-          <br>SUPUESTO 16: Los precios de todos los artículos que vende la empresa tienen el IVA incluido.
-          <br>SUPUESTO 17: En los pedidos a domicilio existe un mínimo, en lo referente al valor del pedido, para que éste sea servido. Si el valor de los artículos que componen el pedido no alcanza este mínimo y el cliente desea que se le sirva a domicilio, se le cobrará ese mínimo.
-          <br>SUPUESTO 18:La empresa cuenta con una serie de pizzas y bocadillos “estrellas”, los cuales están formados por un conjunto de ingredientes predeterminados. Estos artículos tienen un nombre comercial único y su precio es el que resulta del acumulado de los ingredientes que incorporan.
-          </p>
-
-        </div>
-
-        <div class="bg-white p-6 rounded-xl shadow-lg mt-10">
-          <Image
-            src={comidas}
-            alt="Modelo 3"
-            class="w-full object-contain rounded-lg"
-          />
-        </div>
-
-        <p class="mt-6 text-zinc-300">
-          Ingreso al ejercicio: (dentro del drawio pagina dos)
-          <a
-            href="https://drive.google.com/file/d/18cFeP9F3HFqef52bL8cAcNfVfMyMgXfb/view?usp=sharing"
-            target="_blank"
-            class="text-emerald-400 hover:underline"
-          >
-            Ver archivo
-          </a>
-        </p>
-
+      <div class="space-y-4 text-zinc-300 text-sm leading-relaxed bg-zinc-800/40 rounded-xl p-6 border border-zinc-700">
+        <p class="font-semibold text-white">Preguntas a resolver:</p>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>Analizar si existe algún valor multivaluado. Justificar la respuesta.</li>
+          <li>Plantear el esquema relacional con nombre de tabla <span class="text-pink-300 font-semibold">"Member_Dinner"</span>.</li>
+          <li>Elaborar el diagrama de dependencias funcionales para la 1FN.</li>
+          <li>Convertir el resultado a la <span class="text-pink-300 font-semibold">3FN</span> paso a paso, justificando cada decisión tomada.</li>
+        </ul>
       </div>
     </div>
 
-    <!-- MODELO 4 -->
-    <div class="p-[2px] rounded-3xl bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 mb-20 shadow-2xl">
-
-      <div class="bg-zinc-900 p-10 rounded-3xl">
-
-        <div class="mb-8">
-          <span class="text-sm uppercase tracking-widest text-orange-400">
-            Base de Datos
-          </span>
-
-          <h2 class="text-3xl font-bold mt-2 text-white">
-            Modelo 4
-          </h2>
-        </div>
-
-        <div class="space-y-5 text-zinc-300 leading-relaxed">
-
-          <p>
-            El enunciado del problema se presenta dividido en tres partes:
-          </p>
-
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-6 mt-10">
-
-          <div class="bg-white p-4 rounded-xl shadow-lg">
-            <Image
-              src={imagen1}
-              alt="Enunciado parte 1"
-              class="w-full h-full rounded-lg object-contain"
-            />
-          </div>
-
-          <div class="bg-white p-4 rounded-xl shadow-lg">
-            <Image
-              src={imagen2}
-              alt="Enunciado parte 2"
-              class="w-full h-full rounded-lg object-contain"
-            />
-          </div>
-
-          <div class="bg-white p-4 rounded-xl shadow-lg">
-            <Image
-              src={imagen3}
-              alt="Enunciado parte 3"
-              class="w-full h-full rounded-lg object-contain"
-            />
-          </div>
-
-        </div>
-
-        <div class="bg-white p-6 rounded-xl shadow-lg mt-10">
-          <Image
-            src={employees}
-            alt="Modelo ER employees"
-            class="w-full object-contain rounded-lg"
-          />
-        </div>
-
-        <p class="mt-6 text-zinc-300">
-          Ingreso al ejercicio:
-          <a
-            href="https://drive.google.com/file/d/18cFeP9F3HFqef52bL8cAcNfVfMyMgXfb/view?usp=sharing"
-            target="_blank"
-            class="text-orange-400 hover:underline"
-          >
-            Ver archivo
-          </a>
-        </p>
-
+    <!-- EJERCICIO 4 -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-semibold uppercase tracking-wider">Ejercicio 4</span>
+        <h3 class="text-xl font-semibold text-white">Tabla de Visitas Médicas</h3>
       </div>
-    </div>
-        <!-- MODELO 5 -->
-    <div class="p-[2px] rounded-3xl bg-gradient-to-r from-yellow-500 via-amber-500 to-orange-500 mb-20 shadow-2xl">
 
-      <div class="bg-zinc-900 p-10 rounded-3xl">
+      <p class="text-zinc-300 mb-6 leading-relaxed">
+        Análisis de la tabla de visitas médicas para identificar su forma normal y convertirla a 3FN,
+        utilizando las dependencias funcionales provistas.
+      </p>
 
-        <div class="mb-8">
-          <span class="text-sm uppercase tracking-widest text-yellow-400">
-            Base de Datos
-          </span>
+      <div class="overflow-x-auto rounded-xl border border-zinc-700 mb-6">
+        <table class="w-full text-sm text-zinc-300">
+          <thead>
+            <tr class="bg-zinc-800 text-indigo-300 text-xs uppercase tracking-wider">
+              <th class="px-4 py-3 text-left">VisitaNo</th>
+              <th class="px-4 py-3 text-left">DiaVisita</th>
+              <th class="px-4 py-3 text-left">PacNo</th>
+              <th class="px-4 py-3 text-left">PacEdad</th>
+              <th class="px-4 py-3 text-left">PacCiudad</th>
+              <th class="px-4 py-3 text-left">ProvNo</th>
+              <th class="px-4 py-3 text-left">ProvEspecialidad</th>
+              <th class="px-4 py-3 text-left">Diagnostico</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-zinc-800 text-xs">
+            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">V10020</td><td class="px-4 py-2">1/13/2019</td><td class="px-4 py-2">P1</td><td class="px-4 py-2">35</td><td class="px-4 py-2">Bogotá</td><td class="px-4 py-2">D1</td><td class="px-4 py-2">Internista</td><td class="px-4 py-2">Infección de oído</td></tr>
+            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">V10020</td><td class="px-4 py-2">1/13/2019</td><td class="px-4 py-2">P1</td><td class="px-4 py-2">35</td><td class="px-4 py-2">Bogotá</td><td class="px-4 py-2">D2</td><td class="px-4 py-2">Prac. Enfermería</td><td class="px-4 py-2">Influenza</td></tr>
+            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">V93030</td><td class="px-4 py-2">1/20/2019</td><td class="px-4 py-2">P3</td><td class="px-4 py-2">17</td><td class="px-4 py-2">Cali</td><td class="px-4 py-2">D2</td><td class="px-4 py-2">Prac. Enfermería</td><td class="px-4 py-2">Embarazo</td></tr>
+            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">V82110</td><td class="px-4 py-2">1/18/2019</td><td class="px-4 py-2">P2</td><td class="px-4 py-2">60</td><td class="px-4 py-2">Cúcuta</td><td class="px-4 py-2">D3</td><td class="px-4 py-2">Cardiólogo</td><td class="px-4 py-2">Soplo cardíaco</td></tr>
+          </tbody>
+        </table>
+      </div>
 
-          <h2 class="text-3xl font-bold mt-2 text-white">
-            Modelo 5 — Empresa de Transportes
-          </h2>
+      <!-- Dependencias funcionales -->
+      <div class="bg-zinc-800/60 rounded-xl p-5 mb-5 border border-indigo-500/20">
+        <p class="text-xs uppercase tracking-widest text-indigo-400 mb-3 font-semibold">Dependencias Funcionales</p>
+        <div class="grid sm:grid-cols-2 gap-2 font-mono text-xs text-zinc-300">
+          <div class="bg-zinc-900 rounded-lg px-3 py-2">PacNo → PacEdad, PacCiudad</div>
+          <div class="bg-zinc-900 rounded-lg px-3 py-2">ProvNo → ProvEspecialidad</div>
+          <div class="bg-zinc-900 rounded-lg px-3 py-2">VisitaNo → PacNo, DiaVisita, PacEdad, PacCiudad</div>
+          <div class="bg-zinc-900 rounded-lg px-3 py-2">VisitaNo, ProvNo → Diagnóstico</div>
         </div>
+      </div>
 
-        <div class="space-y-5 text-zinc-300 leading-relaxed">
-
-          <p>
-            Se desea informatizar la gestión de una empresa de transportes que reparte paquetes por
-            toda Colombia. Los encargados de llevar los paquetes son los Conductores, de los que se
-            quiere guardar el número de cédula de ciudadanía, nombre, teléfono, dirección, salario y
-            ciudad en la que vive. De los paquetes transportados interesa conocer el código de paquete,
-            descripción, destinatario y dirección del destinatario. Un conductor distribuye muchos
-            paquetes, y un paquete sólo puede ser distribuido por un conductor. De las ciudades a las
-            que llegan los paquetes interesa guardar el código de ciudad y el nombre. Un paquete sólo
-            puede llegar a una ciudad. Sin embargo, a una ciudad pueden llegar varios paquetes. De los
-            camiones que llevan los Conductores, interesa conocer la matrícula, modelo, tipo y potencia.
-            Un conductor puede conducir diferentes camiones en fechas diferentes, y un camión puede
-            ser conducido por varios Conductores.
-          </p>
-
-          <p>
-            Constrúyase un diagrama E-R. Indique cuáles son las entidades identificadas con los
-            atributos, llaves primarias y llaves foráneas de cada una. Realice la reducción a tablas
-            respectiva y documente todas las decisiones que se hagan acerca de restricciones de
-            correspondencia.
-          </p>
-
-        </div>
-
-        <div class="bg-white p-6 rounded-xl shadow-lg mt-10">
-          <Image
-            src={transportes}
-            alt="Modelo ER Empresa de Transportes"
-            class="w-full object-contain rounded-lg"
-          />
-        </div>
-
-        <p class="mt-6 text-zinc-300">
-          Ingreso al ejercicio:
-          <a
-            href="https://drive.google.com/file/d/1YpmDWwmJXPEd2WbUVHgJ1BTDI--HAjXv/view?usp=sharing"
-            target="_blank"
-            class="text-yellow-400 hover:underline"
-          >
-            Ver archivo
-          </a>
-        </p>
-
+      <div class="space-y-4 text-zinc-300 text-sm leading-relaxed bg-zinc-800/40 rounded-xl p-6 border border-zinc-700">
+        <p class="font-semibold text-white">Preguntas a resolver:</p>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>Indicar y justificar en qué forma normal se encuentra la tabla.</li>
+          <li>Especificar el esquema relacional de la Tabla No. 2.</li>
+          <li>Plantear el diagrama de dependencias funcionales.</li>
+          <li>Convertir la tabla a <span class="text-indigo-300 font-semibold">3FN</span> paso a paso, justificando cada decisión.</li>
+        </ul>
       </div>
     </div>
 
-    <div class="p-[2px] rounded-3xl bg-gradient-to-r from-fuchsia-500 via-pink-500 to-rose-500 mb-20 shadow-2xl">
+    <!-- EJERCICIO 5 -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 text-xs font-semibold uppercase tracking-wider">Ejercicio 5</span>
+        <h3 class="text-xl font-semibold text-white">Netflix DVD Rentals — 3FN y BCNF</h3>
+      </div>
 
-      <div class="bg-zinc-900 p-10 rounded-3xl">
+      <p class="text-zinc-300 mb-6 leading-relaxed">
+        Análisis de la tabla de alquileres de DVD de Netflix. La llave primaria es la clave compuesta
+        <span class="text-cyan-300 font-mono text-xs bg-zinc-800 px-2 py-0.5 rounded">(RentalID, Title)</span>.
+        El objetivo es descomponer la tabla hasta 3FN y evaluar cambios hacia BCNF.
+      </p>
 
-        <div class="mb-8">
-          <span class="text-sm uppercase tracking-widest text-fuchsia-400">
-            Base de Datos
-          </span>
+      <div class="overflow-x-auto rounded-xl border border-zinc-700 mb-6">
+        <table class="w-full text-sm text-zinc-300">
+          <thead>
+            <tr class="bg-zinc-800 text-cyan-300 text-xs uppercase tracking-wider">
+              <th class="px-4 py-3 text-left">RentalID</th>
+              <th class="px-4 py-3 text-left">Title</th>
+              <th class="px-4 py-3 text-left">CustomerID</th>
+              <th class="px-4 py-3 text-left">MailedOutDate</th>
+              <th class="px-4 py-3 text-left">Director</th>
+              <th class="px-4 py-3 text-left">MovieCategory</th>
+              <th class="px-4 py-3 text-left">Price</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-zinc-800 text-xs">
+            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">1</td><td class="px-4 py-2">Die Hard</td><td class="px-4 py-2">1001</td><td class="px-4 py-2">3/3/2010</td><td class="px-4 py-2">John McTiernan</td><td class="px-4 py-2">Old</td><td class="px-4 py-2">$4.25</td></tr>
+            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">1</td><td class="px-4 py-2">The Last Man Standing</td><td class="px-4 py-2">1001</td><td class="px-4 py-2">3/3/2010</td><td class="px-4 py-2">Walter Hill</td><td class="px-4 py-2">Old</td><td class="px-4 py-2">$4.25</td></tr>
+            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">1</td><td class="px-4 py-2">Wedding Crashers</td><td class="px-4 py-2">1001</td><td class="px-4 py-2">3/3/2010</td><td class="px-4 py-2">David Dobkin</td><td class="px-4 py-2">New</td><td class="px-4 py-2">$5.50</td></tr>
+            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">2</td><td class="px-4 py-2">Dodgeball</td><td class="px-4 py-2">1002</td><td class="px-4 py-2">3/4/2010</td><td class="px-4 py-2">Rawson Marshall Thurber</td><td class="px-4 py-2">New</td><td class="px-4 py-2">$5.50</td></tr>
+            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">2</td><td class="px-4 py-2">Die Hard</td><td class="px-4 py-2">1002</td><td class="px-4 py-2">3/4/2010</td><td class="px-4 py-2">John McTiernan</td><td class="px-4 py-2">Old</td><td class="px-4 py-2">$4.25</td></tr>
+            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">3</td><td class="px-4 py-2">As Good as It Gets</td><td class="px-4 py-2">1003</td><td class="px-4 py-2">1/7/2011</td><td class="px-4 py-2">James Brooks</td><td class="px-4 py-2">Old</td><td class="px-4 py-2">$4.25</td></tr>
+            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">4</td><td class="px-4 py-2">Forrest Gump</td><td class="px-4 py-2">1001</td><td class="px-4 py-2">1/7/2011</td><td class="px-4 py-2">Robert Zemeckis</td><td class="px-4 py-2">Old</td><td class="px-4 py-2">$4.25</td></tr>
+          </tbody>
+        </table>
+      </div>
 
-          <h2 class="text-3xl font-bold mt-2 text-white">
-            Modelo 6 — Bienes Raíces
-          </h2>
-        </div>
-
-        <div class="space-y-5 text-zinc-300 leading-relaxed">
-
-          <p>
-            Una empresa de bienes raíces realiza un seguimiento de las casas en venta y de los clientes
-            que buscan comprar casas. Una casa en venta puede estar listada con esta firma o con otra
-            diferente. Estar “listado” con una firma significa que el dueño de la casa tiene un contrato
-            con un agente que trabaja para esa firma. Un agente de bienes raíces de la empresa se
-            caracteriza por tener un nombre (compuesto por Primer nombre, Segundo Nombre, Primer
-            Apellido y Segundo Apellido), cédula de ciudadanía, género, fecha de nacimiento (sobre la
-            cual se obtiene la edad), una cantidad de ventas realizadas en el último mes y un código de
-            agente único.
-          </p>
-
-          <p>
-            Cada casa en el mercado tiene precio, dirección, propietario y una lista de
-            características, como el número de dormitorios, baños, tipo de calefacción,
-            electrodomésticos, tamaño del garaje, etc. Esta lista puede ser diferente para diferentes
-            casas, y algunas características pueden estar presentes en algunas casas, pero faltar en otras.
-          </p>
-
-          <p>
-            Asimismo, cada cliente tiene preferencias que se expresan en los mismos términos
-            (el número de dormitorios, baños, etc.). Aparte de estas preferencias, los clientes especifican el
-            rango de precios de las casas que les interesan.
-          </p>
-
-          <p>
-            Constrúyase un diagrama E-R. Indique cuáles son las entidades identificadas con los
-            atributos, llaves primarias y llaves foráneas de cada una. Realice la reducción a tablas
-            respectiva y documente todas las decisiones que se hagan acerca de restricciones de
-            correspondencia.
-          </p>
-
-        </div>
-
-        <div class="bg-white p-6 rounded-xl shadow-lg mt-10">
-          <Image
-            src={casa}
-            alt="Modelo ER Bienes Raíces"
-            class="w-full object-contain rounded-lg"
-          />
-        </div>
-
-        <p class="mt-6 text-zinc-300">
-          Ingreso al ejercicio: (pagina 2)
-          <a
-            href="https://drive.google.com/file/d/1YpmDWwmJXPEd2WbUVHgJ1BTDI--HAjXv/view?usp=sharing"
-            target="_blank"
-            class="text-fuchsia-400 hover:underline"
-          >
-            Ver archivo
-          </a>
-        </p>
-
+      <div class="space-y-4 text-zinc-300 text-sm leading-relaxed bg-zinc-800/40 rounded-xl p-6 border border-zinc-700">
+        <p class="font-semibold text-white">Preguntas a resolver:</p>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>¿Es verdadera la dependencia funcional <span class="font-mono text-cyan-300 text-xs">RentalID → CustomerID</span>? ¿Y <span class="font-mono text-cyan-300 text-xs">Director → Title</span>? Justificar.</li>
+          <li>Plantear el esquema relacional de la tabla <span class="text-cyan-300 font-semibold">"Rentals"</span>.</li>
+          <li>Especificar las dependencias funcionales pertinentes.</li>
+          <li>Plantear el diagrama de dependencias funcionales para la 1FN.</li>
+          <li>Descomponer "Rentals" en tablas que estén en <span class="text-cyan-300 font-semibold">3FN</span>, indicando nombre, columnas, llaves primarias y foráneas.</li>
+          <li>¿En qué cambiaría la descomposición para llegar a <span class="text-cyan-300 font-semibold">BCNF</span>? Mostrar el resultado y justificar.</li>
+        </ul>
       </div>
     </div>
 
-    <div class="p-[2px] rounded-3xl bg-gradient-to-r from-fuchsia-500 via-pink-500 to-rose-500 mb-20 shadow-2xl">
-
-      <div class="bg-zinc-900 p-10 rounded-3xl">
-
-        <div class="mb-8">
-          <span class="text-sm uppercase tracking-widest text-fuchsia-400">
-            Base de Datos
-          </span>
-
-          <h2 class="text-3xl font-bold mt-2 text-white">
-            Parte H bosque SHOP
-          </h2>
-        </div>
-
-        <div class="space-y-5 text-zinc-300 leading-relaxed">
-
-          <p>
-             Inventario por centro y reservas
-             <br>- El inventario se controla por presentación y centro de despacho (propio o aliado).
-             <br>- El inventario distingue disponible y reservado.
-             <br>- Al confirmar una venta, se incrementa reservado (si hay stock).
-             <br>- Al despachar, se decrementa reservado y disponible según corresponda.
-             <br>- Se define punto de reorden y stock de seguridad por presentación y centro.
-             <br>- Se registra merma/ajuste de inventario con motivo (daño, conteo, caducidad, robo).
-          </p>
-
-        </div>
-
-        <div class="bg-white p-6 rounded-xl shadow-lg mt-10">
-          <Image
-            src={h}
-            alt="Modelo grupal"
-            class="w-full object-contain rounded-lg"
-          />
-        </div>
-
-        <p class="mt-6 text-zinc-300">
-          Ingreso al ejercicio: (pagina llamada H)
-          <a
-            href="https://drive.google.com/file/d/1n0KUsF-P7YeSn3PlNEnPnecMFY2kuSXQ/view?usp=sharing"
-            target="_blank"
-            class="text-fuchsia-400 hover:underline"
-          >
-            Ver archivo
-          </a>
-        </p>
-
+    <!-- EJERCICIO 6 — REFLEXIÓN -->
+    <div class="mb-4">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="px-3 py-1 rounded-full bg-rose-500/20 text-rose-300 text-xs font-semibold uppercase tracking-wider">Ejercicio 6</span>
+        <h3 class="text-xl font-semibold text-white">Reflexión: Diseño E-R y Normalización</h3>
       </div>
-    </div>
-    <div class="p-[2px] rounded-3xl bg-gradient-to-r from-fuchsia-500 via-pink-500 to-rose-500 mb-20 shadow-2xl">
 
-      <div class="bg-zinc-900 p-10 rounded-3xl">
-
-        <div class="mb-8">
-          <span class="text-sm uppercase tracking-widest text-fuchsia-400">
-            Base de Datos
-          </span>
-
-          <h2 class="text-3xl font-bold mt-2 text-white">
-            Parte P bosque SHOP
-          </h2>
-        </div>
-
-        <div class="space-y-5 text-zinc-300 leading-relaxed">
-
-          <p> P. PQR (atención al cliente) y SLA
-          <br>- Un PQR lo registra un cliente, con tipo (queja, reclamo, consulta) y canal.
-          <br>- Un PQR puede asociarse a una venta o a un envío (o a ambos).
-          <br>- Se asigna a un agente de soporte y se registra historial de estados.
-          <br>- Se define SLA objetivo por tipo y prioridad.
-          <br>- Un PQR puede escalarse a un nivel superior (supervisión).
-          </p>
-
-        </div>
-
-        <div class="bg-white p-6 rounded-xl shadow-lg mt-10">
-          <Image
-            src={p}
-            alt="Modelo grupal"
-            class="w-full object-contain rounded-lg"
-          />
-        </div>
-
-        <p class="mt-6 text-zinc-300">
-          Ingreso al ejercicio: (pagina llamada P)
-          <a
-            href="https://drive.google.com/file/d/1n0KUsF-P7YeSn3PlNEnPnecMFY2kuSXQ/view?usp=sharing"
-            target="_blank"
-            class="text-fuchsia-400 hover:underline"
-          >
-            Ver archivo
-          </a>
+      <div class="bg-zinc-800/40 rounded-xl p-6 border border-zinc-700 text-zinc-300 text-sm leading-relaxed">
+        <p>
+          Escribir una reflexión detallada que describa cómo se relaciona un buen
+          <span class="text-rose-300 font-semibold">Diseño Entidad-Relación</span> con el ejercicio de
+          <span class="text-rose-300 font-semibold">Normalización y Descomposición de Dependencias Funcionales</span>.
+          Justificar cada afirmación planteada de manera completa.
         </p>
-
-      </div>
-    </div>
- <div class="p-[3px] rounded-3xl bg-gradient-to-r from-sky-400 via-cyan-500 to-blue-600 mb-20 shadow-[0_0_40px_rgba(14,165,233,0.35)]">
-
-      <div class="bg-zinc-900 p-10 rounded-3xl border border-cyan-500/20">
-
-        <div class="flex items-center justify-between mb-8 flex-wrap gap-4">
-
-          <div>
-            <span class="text-sm uppercase tracking-[0.25em] text-cyan-300 font-semibold">
-              Proyecto Académico BOSQUESHOP
-            </span>
-
-            <h2 class="text-4xl font-extrabold mt-3 text-white">
-              Proyecto 
-            </h2>
-          </div>
-
-          <div class="px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-400/30">
-            <span class="text-cyan-300 text-sm font-medium">
-             
-            </span>
-          </div>
-
-        </div>
-
-        <div class="space-y-5 text-zinc-300 leading-relaxed text-lg">
-
-        </div>
-
-        <div class="mt-10 border-2 border-dashed border-cyan-500/30 rounded-2xl p-16 text-center bg-cyan-500/5">
-
-          <p class="text-cyan-300 text-xl font-semibold">
-            Espacio reservado para contenido completo del Proyecto BOSQUESHOP
-          </p>
-        
-        <div class="bg-white p-6 rounded-xl shadow-lg mt-10">
-          <Image
-            src={total}
-            alt="Modelo Proyecto integrado"
-            class="w-full object-contain rounded-lg"/>
-        </div>
-          <p class="mt-6 text-zinc-300">
-          Ingreso al ejercicio: (pagina para ver: la llamada no tocar)
-          <a
-            href="https://drive.google.com/file/d/1n0KUsF-P7YeSn3PlNEnPnecMFY2kuSXQ/view?usp=sharing"
-            target="_blank"
-            class="text-fuchsia-400 hover:underline">
-            Ver archivo
-          </a>
-        </p>
-        </div>
-
-      </div>
-    </div>
-    <div class="p-[3px] rounded-3xl bg-gradient-to-r from-lime-400 via-emerald-500 to-green-600 mb-20 shadow-[0_0_40px_rgba(34,197,94,0.35)]">
-
-      <div class="bg-zinc-900 p-10 rounded-3xl border border-green-500/20">
-
-        <div class="flex items-center justify-between mb-8 flex-wrap gap-4">
-
-          <div>
-            <span class="text-sm uppercase tracking-[0.25em] text-lime-300 font-semibold">
-              Proyecto Académico
-            </span>
-
-            <h2 class="text-4xl font-extrabold mt-3 text-white">
-              Proyecto 
-            </h2>
-          </div>
-
-          <div class="px-4 py-2 rounded-full bg-green-500/10 border border-green-400/30">
-            <span class="text-green-300 text-sm font-medium">
-              MER -- :3
-            </span>
-          </div>
-
-        </div>
-
-        <div class="space-y-5 text-zinc-300 leading-relaxed text-lg">
-
-          <p>
-            Espacio destinado para MER proyecto final
-          </p>
-          <ul class="list-disc pl-6 space-y-3">
-
-          </ul>
-
-        </div>
-
-        <div class="mt-10 border-2 border-dashed border-green-500/30 rounded-2xl p-16 text-center bg-green-500/5">
-        <div class="bg-white p-6 rounded-xl shadow-lg mt-10">
-          <Image
-            src={mer}
-            alt="Modelo ER Bienes Raíces"
-            class="w-full object-contain rounded-lg"/>
-        </div>
-          <p class="mt-6 text-zinc-300">
-          Ingreso al ejercicio: (pagina 2)
-          <a
-            href="https://drive.google.com/file/d/1NRu_P3ginWFnMh0Mest_wQzmrTxb8iPG/view?usp=sharing"
-            target="_blank"
-            class="text-fuchsia-400 hover:underline">
-            Ver archivo
-          </a>
-        </p>
-
-        </div>
-
       </div>
     </div>
 
-    <div class="p-[3px] rounded-3xl bg-gradient-to-r from-sky-400 via-cyan-500 to-blue-600 mb-20 shadow-[0_0_40px_rgba(14,165,233,0.35)]">
-
-      <div class="bg-zinc-900 p-10 rounded-3xl border border-cyan-500/20">
-
-        <div class="flex items-center justify-between mb-8 flex-wrap gap-4">
-
-          <div>
-            <span class="text-sm uppercase tracking-[0.25em] text-cyan-300 font-semibold">
-              Proyecto Académico
-            </span>
-
-            <h2 class="text-4xl font-extrabold mt-3 text-white">
-              Proyecto 
-            </h2>
-          </div>
-
-          <div class="px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-400/30">
-            <span class="text-cyan-300 text-sm font-medium">
-              MERE -- ;3
-            </span>
-          </div>
-
-        </div>
-
-        <div class="space-y-5 text-zinc-300 leading-relaxed text-lg">
-
-          <p>
-            Espacio destinado para agregar MERE del proyecto.
-          </p>
-
-
-        </div>
-
-        <div class="mt-10 border-2 border-dashed border-cyan-500/30 rounded-2xl p-16 text-center bg-cyan-500/5">
-
-          <p class="text-cyan-300 text-xl font-semibold">
-            Espacio reservado para contenido MERE del Proyecto 
-          </p>
-        
-        <div class="bg-white p-6 rounded-xl shadow-lg mt-10">
-          <Image
-            src={mere}
-            alt="Modelo  MERE Proyecto"
-            class="w-full object-contain rounded-lg"/>
-        </div>
-          <p class="mt-6 text-zinc-300">
-          Ingreso al ejercicio: (pagina 1)
-          <a
-            href="https://drive.google.com/file/d/1NRu_P3ginWFnMh0Mest_wQzmrTxb8iPG/view?usp=sharing"
-            target="_blank"
-            class="text-fuchsia-400 hover:underline">
-            Ver archivo
-          </a>
-        </p>
-        </div>
-
-      </div>
+  </div>
+</div>
     </div>
-
   </section>
 
 </DefaultLayout>

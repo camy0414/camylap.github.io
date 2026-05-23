@@ -5,9 +5,11 @@ import { Image } from 'astro:assets'
 import aerolinea from '@assets/img/aerolinea.drawio.png'
 import residuos from '@assets/img/Residuos.png'
 import comidas from '@assets/img/comidas.png'
+
 import imagen1 from '@assets/img/enunciado1.png'
 import imagen2 from '@assets/img/enunciado2.png'
 import imagen3 from '@assets/img/enunciado3.png'
+import employees from '@assets/img/employe.png'
 ---
 
 <DefaultLayout title="Modelado - Einny Camyla">
@@ -30,7 +32,6 @@ import imagen3 from '@assets/img/enunciado3.png'
 
       <div class="bg-zinc-900 p-10 rounded-3xl">
 
-        <!-- HEADER -->
         <div class="mb-8">
           <span class="text-sm uppercase tracking-widest text-pink-400">
             Base de Datos
@@ -41,7 +42,6 @@ import imagen3 from '@assets/img/enunciado3.png'
           </h2>
         </div>
 
-        <!-- TEXTO -->
         <div class="space-y-5 text-zinc-300 leading-relaxed">
 
           <p>
@@ -81,7 +81,6 @@ import imagen3 from '@assets/img/enunciado3.png'
 
         </div>
 
-        <!-- IMAGEN -->
         <div class="bg-white p-6 rounded-xl shadow-lg mt-10">
           <Image
             src={aerolinea}
@@ -98,7 +97,6 @@ import imagen3 from '@assets/img/enunciado3.png'
 
       <div class="bg-zinc-900 p-10 rounded-3xl">
 
-        <!-- HEADER -->
         <div class="mb-8">
           <span class="text-sm uppercase tracking-widest text-cyan-400">
             Base de Datos
@@ -109,7 +107,6 @@ import imagen3 from '@assets/img/enunciado3.png'
           </h2>
         </div>
 
-        <!-- TEXTO -->
         <div class="space-y-5 text-zinc-300 leading-relaxed">
 
           <p>
@@ -135,59 +132,8 @@ import imagen3 from '@assets/img/enunciado3.png'
             <li>Los traslados y tratamientos realizados.</li>
           </ul>
 
-          <div class="mt-8">
-            <h3 class="text-xl font-semibold text-white mb-4">
-              Supuestos del problema
-            </h3>
-
-            <ul class="list-disc pl-6 space-y-4">
-
-              <li>
-                Una empresa productora produce un número amplio de residuos constituidos por un número variable de constituyentes químicos.
-              </li>
-
-              <li>
-                Más de una empresa productora puede producir residuos con igual número de constituyentes químicos y con las mismas o distintas cantidades.
-              </li>
-
-              <li>
-                Las empresas productoras asignan un código único a los residuos que producen, permitiendo diferenciar distintas producciones.
-              </li>
-
-              <li>
-                Los residuos pueden ser trasladados en su totalidad, parcialmente o incluso no ser trasladados nunca.
-              </li>
-
-              <li>
-                En cada traslado la cantidad enviada tiene un único destino.
-              </li>
-
-              <li>
-                En una misma fecha las empresas productoras pueden ordenar más de un traslado de un mismo o distinto residuo.
-              </li>
-
-              <li>
-                En cada traslado puede intervenir más de una empresa transportista utilizando distintos medios de transporte.
-              </li>
-
-              <li>
-                El residuo se traslada en un tipo de envase determinado por la empresa productora.
-              </li>
-
-              <li>
-                Es importante conocer la fecha de llegada y el tratamiento aplicado al residuo.
-              </li>
-
-              <li>
-                Por seguridad, en un traslado sólo puede transportarse un residuo de una empresa productora.
-              </li>
-
-            </ul>
-          </div>
-
         </div>
 
-        <!-- IMAGEN -->
         <div class="bg-white p-6 rounded-xl shadow-lg mt-10">
           <Image
             src={residuos}
@@ -196,7 +142,6 @@ import imagen3 from '@assets/img/enunciado3.png'
           />
         </div>
 
-        <!-- LINK -->
         <p class="mt-6 text-zinc-300">
           Ingreso al ejercicio en Draw.io:
           <a
@@ -211,59 +156,53 @@ import imagen3 from '@assets/img/enunciado3.png'
       </div>
     </div>
 
+    <!-- MODELO 3 -->
     <div class="p-[2px] rounded-3xl bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 mb-20 shadow-2xl">
 
       <div class="bg-zinc-900 p-10 rounded-3xl">
+
         <div class="mb-8">
           <span class="text-sm uppercase tracking-widest text-emerald-400">
             Base de Datos
           </span>
 
           <h2 class="text-3xl font-bold mt-2 text-white">
-            Modelo 3
+            Modelo 3 — Comidas a Domicilio
           </h2>
         </div>
 
         <div class="space-y-5 text-zinc-300 leading-relaxed">
 
-          <p>COMIDAS A DOMICILIO
-          <br> 14.1. ENUNCIADO DEL PROBLEMA
-          <br>Eat’n Go, una empresa internacional dedicada a la comercialización de comidas rápidas, tiene la intención de ubicar una franquicia en nuestra localidad, siéndole necesario informatizar la gestión del negocio adaptándolo a las características propias de la clientela esperada. Esta empresa se dedica a la venta de pizzas y bocadillos, además de productos complementarios como refrescos, helados, etc.
-          <br>Según las especificaciones aportadas por esta empresa se sabe que:
-          <br>SUPUESTO 1: Tanto las pizzas como los bocadillos pueden condimentarse con un número de ingredientes de entre un conjunto de ellos con los que trabaja la empresa.
-          <br>SUPUESTO 2: Los ingredientes con los que se hacen los bocadillos pueden ser iguales o distintos a aquellos con los que se hacen las pizzas.
-          <br>SUPUESTO 3: El número de ingredientes que intervienen en un artículo que se vende (pizza o bocadillo) no está delimitado, pudiendo realizarse una venta de estos artículos sin ningún ingrediente. Es decir, la empresa vende también las bases de las pizzas y el pan con los que prepara las pizzas y los bocadillos, respectivamente.
-          <br>SUPUESTO 4: Cada artículo que vende la empresa (pizzas, bocadillos y productos complementarios) tiene un precio base asignado (el precio de estos productos cuando se venden de forma independiente), sin contar los ingredientes que pueden acompañar a alguno de estos tipos de artículos.
-          <br>SUPUESTO 5: Cada ingrediente tiene un precio para los bocadillos, mientras que para las pizzas todos los ingredientes tienen el mismo precio (los productos complementarios no llevan ingredientes).
-          <br>SUPUESTO 6: Los artículos se pueden vender en distinto tamaño, en cuyo caso el precio base es distinto según el tamaño, y el precio de los ingredientes también. Existen, actualmente, tres tamaños en los que se venden los bocadillos y las pizzas (pequeño, normal y grande).
-          <br>SUPUESTO 7: Las ventas se pueden hacer de tres formas diferentes: para consumir en el local, para recoger en el local y llevar o consumir en el mismo, y para servir a domicilio, en cuyo caso puede incrementarse un cargo añadido por el porte de la venta.
-          <br>SUPUESTO 8: Los artículos complementarios que vende la empresa tienen un precio fijo en base a su tipo, tamaño, sabor, etc.
-          <br>SUPUESTO 9: Los clientes pueden solicitar un servicio de la empresa (un pedido) tanto personalmente en el local como telefónicamente.
-          <br>SUPUESTO 10: En los pedidos telefónicos se tomarán los datos completos del cliente; en los de recoger sólo el documento nacional de identidad y su nombre completo, y en los de consumir en el local no se tomará ningún dato, a no ser que sea necesario por otras razones.
-          <br>SUPUESTO 11: A la empresa le interesa mantener información de todos los clientes a los que se les recoge información por dos razones:
-          Simplemente a escala informativa, de consumo y marketing.Para llevar el control del consumo y favorecer, mediante obsequios, a aquellos clientes que alcancen un cierto consumo.
-          <br>SUPUESTO 12: La empresa organiza, a veces, promociones para sus clientes. Éstas se basan en el obsequio de algún regalo o artículo de propaganda sobre la base de:
-          Las unidades consumidas de alguno de los tipos de artículos: pizzas o bocadillos.Cargo total alcanzado en los pedidos.
-          <br>SUPUESTO 13: Cuando la empresa obsequia a los clientes con algún artículo de promoción siempre recaba de los mismos toda su información y, además, mantiene información sobre los regalos de promoción que se les entrega para, a ser posible, no hacer entregas duplicadas de los mismos.
-          <br>SUPUESTO 14: La empresa cuenta con una serie de repartidores encargados del reparto a domicilio y de una batería de scooters para ayudarles en su cometido. Cada reparto se le asigna a un repartidor, el cual tiene asignado un scooter, aunque un mismo scooter puede ser utilizado por distintos repartidores (por supuesto en distintos turnos de trabajo).
-          <br>SUPUESTO 15: A la empresa le interesa conocer información del coste de los scooters sobre la base del consumo de gasolina de los mismos en la realización de los repartos.
-          <br>SUPUESTO 16: Los precios de todos los artículos que vende la empresa tienen el IVA incluido.
-          <br>SUPUESTO 17: En los pedidos a domicilio existe un mínimo, en lo referente al valor del pedido, para que éste sea servido. Si el valor de los artículos que componen el pedido no alcanza este mínimo y el cliente desea que se le sirva a domicilio, se le cobrará ese mínimo.
-          <br>SUPUESTO 18:La empresa cuenta con una serie de pizzas y bocadillos “estrellas”, los cuales están formados por un conjunto de ingredientes predeterminados. Estos artículos tienen un nombre comercial único y su precio es el que resulta del acumulado de los ingredientes que incorporan.
+          <p>
+            Eat’n Go es una empresa dedicada a la comercialización de comidas rápidas.
           </p>
+
+          <p>
+            La empresa vende pizzas, bocadillos y productos complementarios
+            como refrescos y helados.
+          </p>
+
+          <ul class="list-disc pl-6 space-y-3">
+            <li>Los productos pueden incluir distintos ingredientes.</li>
+            <li>Los artículos se venden en diferentes tamaños.</li>
+            <li>Los pedidos pueden ser locales, para recoger o a domicilio.</li>
+            <li>La empresa maneja promociones y regalos.</li>
+            <li>Existen repartidores y scooters para entregas.</li>
+            <li>Los pedidos a domicilio tienen un valor mínimo.</li>
+          </ul>
 
         </div>
 
         <div class="bg-white p-6 rounded-xl shadow-lg mt-10">
           <Image
             src={comidas}
-            alt="Modelo 3"
+            alt="Modelo ER Comidas"
             class="w-full object-contain rounded-lg"
           />
         </div>
 
         <p class="mt-6 text-zinc-300">
-          Ingreso al ejercicio: (dentro del drawio pagina dos)
+          Ingreso al ejercicio:
           <a
             href="https://drive.google.com/file/d/18cFeP9F3HFqef52bL8cAcNfVfMyMgXfb/view?usp=sharing"
             target="_blank"
@@ -276,28 +215,76 @@ import imagen3 from '@assets/img/enunciado3.png'
       </div>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-6 mt-10">
-    <div class="bg-white p-4 rounded-xl shadow-lg">
-    <Image
-      src={imagen1}
-      alt="Enunciado parte 1"
-      class="w-full rounded-lg object-contain"/>
-    </div>
+    <!-- MODELO 4 -->
+    <div class="p-[2px] rounded-3xl bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 mb-20 shadow-2xl">
 
-    <div class="bg-white p-4 rounded-xl shadow-lg">
-      <Image
-        src={imagen2}
-        alt="Enunciado parte 2"
-        class="w-full rounded-lg object-contain"/>
-    </div>
+      <div class="bg-zinc-900 p-10 rounded-3xl">
 
-    <div class="bg-white p-4 rounded-xl shadow-lg">
-      <Image
-        src={imagen3}
-        alt="Enunciado parte 3"
-        class="w-full rounded-lg object-contain"/>
-    </div>
+        <div class="mb-8">
+          <span class="text-sm uppercase tracking-widest text-orange-400">
+            Base de Datos
+          </span>
 
+          <h2 class="text-3xl font-bold mt-2 text-white">
+            Modelo 4
+          </h2>
+        </div>
+
+        <div class="space-y-5 text-zinc-300 leading-relaxed">
+
+          <p>
+            El enunciado del problema se presenta dividido en tres partes:
+          </p>
+
+        </div>
+
+        <!-- IMÁGENES EN FILA -->
+        <div class="grid md:grid-cols-3 gap-6 mt-10">
+
+          <div class="bg-white p-4 rounded-xl shadow-lg">
+            <Image
+              src={imagen1}
+              alt="Enunciado parte 1"
+              class="w-full h-full rounded-lg object-contain"
+            />
+          </div>
+
+          <div class="bg-white p-4 rounded-xl shadow-lg">
+            <Image
+              src={imagen2}
+              alt="Enunciado parte 2"
+              class="w-full h-full rounded-lg object-contain"
+            />
+          </div>
+
+          <div class="bg-white p-4 rounded-xl shadow-lg">
+            <Image
+              src={imagen3}
+              alt="Enunciado parte 3"
+              class="w-full h-full rounded-lg object-contain"
+            />
+          </div>
+
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg mt-10">
+          <Image
+            src={employees}
+            alt="Modelo ER employees"
+            class="w-full object-contain rounded-lg"
+          />
+        </div>
+        <p class="mt-6 text-zinc-300">
+          Ingreso al ejercicio:
+          <a
+            href="https://drive.google.com/file/d/18cFeP9F3HFqef52bL8cAcNfVfMyMgXfb/view?usp=sharing"
+            target="_blank"
+            class="text-orange-400 hover:underline"
+          >
+            Ver archivo
+          </a>
+        </p>
+
+      </div>
     </div>
 
   </section>

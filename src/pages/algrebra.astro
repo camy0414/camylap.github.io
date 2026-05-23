@@ -25,6 +25,14 @@ import mere from '@assets/img/mere.png'
 <div class="p-[2px] rounded-3xl bg-gradient-to-r from-violet-600 via-purple-500 to-fuchsia-500 mb-20 shadow-2xl">
   <div class="bg-zinc-900 p-10 rounded-3xl">
 
+    ---
+// TallerNormalizacion_Resuelto.astro
+// Pega este bloque dentro del <section> de tu página de Normalización
+---
+
+<!-- ═══════════════════════════════════════════════════════════
+     TALLER DE NORMALIZACIÓN — RESUELTO
+═══════════════════════════════════════════════════════════ -->
 <div class="p-[2px] rounded-3xl bg-gradient-to-r from-violet-600 via-purple-500 to-fuchsia-500 mb-20 shadow-2xl">
   <div class="bg-zinc-900 p-10 rounded-3xl">
 
@@ -35,12 +43,16 @@ import mere from '@assets/img/mere.png'
       <p class="text-zinc-400 mt-2 text-sm">Docente: Ing. Christian Felipe Duarte Arévalo · Bases de Datos 1</p>
     </div>
 
+    <!-- ─────────────────────────────────────────────────────
+         EJERCICIO 1 — TABLA PROYECTOS/EMPLEADOS
+    ───────────────────────────────────────────────────── -->
     <div class="mb-16">
       <div class="flex items-center gap-3 mb-6">
         <span class="px-3 py-1 rounded-full bg-violet-500/20 text-violet-300 text-xs font-semibold uppercase tracking-wider">Ejercicio 1</span>
         <h3 class="text-xl font-semibold text-white">Tabla de Proyectos y Empleados</h3>
       </div>
 
+      <!-- Tabla original -->
       <p class="text-zinc-400 text-xs uppercase tracking-widest mb-2">Tabla No. 1 — Datos originales</p>
       <div class="overflow-x-auto rounded-xl border border-zinc-700 mb-6">
         <table class="w-full text-sm text-zinc-300">
@@ -67,7 +79,7 @@ import mere from '@assets/img/mere.png'
 
       <!-- Respuesta forma normal -->
       <div class="bg-violet-500/10 border border-violet-500/30 rounded-xl p-5 mb-6">
-        <p class="text-violet-300 font-semibold text-sm mb-2"> Forma normal actual: 1FN (incompleta / con anomalías)</p>
+        <p class="text-violet-300 font-semibold text-sm mb-2">📌 Forma normal actual: 1FN (incompleta / con anomalías)</p>
         <p class="text-zinc-300 text-sm leading-relaxed">
           La tabla tiene una clave compuesta implícita <span class="font-mono text-violet-300 text-xs bg-zinc-800 px-1 rounded">(cod_proyecto, cod_empleado)</span>.
           Cumple 1FN porque todos los atributos son atómicos y no hay grupos repetidos. Sin embargo,
@@ -166,11 +178,14 @@ import mere from '@assets/img/mere.png'
           <p class="text-zinc-300 text-xs font-mono">hrs_asignadas</p>
         </div>
         <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-3 mt-4 text-xs text-emerald-200">
-          Con estas 4 tablas el esquema está en <strong>3FN</strong>: todos los atributos no clave dependen única y directamente de su llave primaria.
+          ✅ Con estas 4 tablas el esquema está en <strong>3FN</strong>: todos los atributos no clave dependen única y directamente de su llave primaria.
         </div>
       </div>
     </div>
 
+    <!-- ─────────────────────────────────────────────────────
+         EJERCICIO 2 — TABLA ESTUDIANTES
+    ───────────────────────────────────────────────────── -->
     <div class="mb-16">
       <div class="flex items-center gap-3 mb-6">
         <span class="px-3 py-1 rounded-full bg-fuchsia-500/20 text-fuchsia-300 text-xs font-semibold uppercase tracking-wider">Ejercicio 2</span>
@@ -194,7 +209,7 @@ import mere from '@assets/img/mere.png'
       </div>
 
       <div class="bg-red-500/10 border border-red-500/30 rounded-xl p-5 mb-6">
-        <p class="text-red-300 font-semibold text-sm mb-2"> La tabla NO está en 1FN</p>
+        <p class="text-red-300 font-semibold text-sm mb-2">❌ La tabla NO está en 1FN</p>
         <p class="text-zinc-300 text-sm leading-relaxed">
           Las columnas <span class="font-mono text-amber-400 text-xs bg-zinc-800 px-1 rounded">Courses</span> y
           <span class="font-mono text-amber-400 text-xs bg-zinc-800 px-1 rounded">GradePoints</span> contienen múltiples valores en una sola celda (listas separadas por comas).
@@ -252,10 +267,13 @@ import mere from '@assets/img/mere.png'
       </div>
 
       <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-3 text-xs text-emerald-200">
-         Con esta descomposición cada celda tiene un valor atómico. La tabla ESTUDIANTES contiene datos únicos del estudiante y MATRICULAS registra cada curso con su nota de forma individual, cumpliendo <strong>1FN</strong>.
+        ✅ Con esta descomposición cada celda tiene un valor atómico. La tabla ESTUDIANTES contiene datos únicos del estudiante y MATRICULAS registra cada curso con su nota de forma individual, cumpliendo <strong>1FN</strong>.
       </div>
     </div>
 
+    <!-- ─────────────────────────────────────────────────────
+         EJERCICIO 3 — RESTAURANTE / MEMBER_DINNER
+    ───────────────────────────────────────────────────── -->
     <div class="mb-16">
       <div class="flex items-center gap-3 mb-6">
         <span class="px-3 py-1 rounded-full bg-pink-500/20 text-pink-300 text-xs font-semibold uppercase tracking-wider">Ejercicio 3</span>
@@ -333,10 +351,13 @@ import mere from '@assets/img/mere.png'
         </div>
       </div>
       <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-3 text-xs text-emerald-200">
-         Las 4 tablas están en <strong>3FN</strong>: no hay dependencias parciales ni transitivas. Cada atributo no clave depende directamente de la llave primaria de su tabla.
+        ✅ Las 4 tablas están en <strong>3FN</strong>: no hay dependencias parciales ni transitivas. Cada atributo no clave depende directamente de la llave primaria de su tabla.
       </div>
     </div>
 
+    <!-- ─────────────────────────────────────────────────────
+         EJERCICIO 4 — VISITAS MÉDICAS
+    ───────────────────────────────────────────────────── -->
     <div class="mb-16">
       <div class="flex items-center gap-3 mb-6">
         <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-semibold uppercase tracking-wider">Ejercicio 4</span>
@@ -362,7 +383,7 @@ import mere from '@assets/img/mere.png'
 
       <!-- Forma normal -->
       <div class="bg-amber-500/10 border border-amber-500/30 rounded-xl p-5 mb-6">
-        <p class="text-amber-300 font-semibold text-sm mb-2"> Forma normal actual: 1FN</p>
+        <p class="text-amber-300 font-semibold text-sm mb-2">📌 Forma normal actual: 1FN</p>
         <p class="text-zinc-300 text-sm leading-relaxed">
           La clave primaria compuesta es <span class="font-mono text-indigo-300 text-xs bg-zinc-800 px-1 rounded">(VisitaNo, ProvNo)</span>.
           Todos los atributos son atómicos (1FN ✓). Sin embargo, existen <strong class="text-white">dependencias parciales</strong>:
@@ -450,10 +471,13 @@ import mere from '@assets/img/mere.png'
         </div>
       </div>
       <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-3 text-xs text-emerald-200">
-        Cada atributo no clave depende directa y únicamente de la llave primaria de su tabla. Esquema en <strong>3FN</strong>.
+        ✅ Cada atributo no clave depende directa y únicamente de la llave primaria de su tabla. Esquema en <strong>3FN</strong>.
       </div>
     </div>
 
+    <!-- ─────────────────────────────────────────────────────
+         EJERCICIO 5 — NETFLIX RENTALS / BCNF
+    ───────────────────────────────────────────────────── -->
     <div class="mb-16">
       <div class="flex items-center gap-3 mb-6">
         <span class="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 text-xs font-semibold uppercase tracking-wider">Ejercicio 5</span>
@@ -492,7 +516,7 @@ import mere from '@assets/img/mere.png'
           <p class="text-zinc-300 text-xs leading-relaxed">Misma justificación. Es una dependencia parcial respecto a la PK compuesta (RentalID, Title), dado que CustomerID depende solo de RentalID.</p>
         </div>
         <div class="bg-zinc-800/60 rounded-xl p-4 border border-zinc-700">
-          <p class="text-red-400 text-xs font-semibold mb-1">iii. Director → Title  FALSA</p>
+          <p class="text-red-400 text-xs font-semibold mb-1">iii. Director → Title ❌ FALSA</p>
           <p class="text-zinc-300 text-xs leading-relaxed">John McTiernan dirigió tanto "Die Hard" como potencialmente otras películas. Un director puede haber dirigido múltiples títulos. La dependencia no se sostiene.</p>
         </div>
       </div>
@@ -571,10 +595,13 @@ import mere from '@assets/img/mere.png'
         </p>
       </div>
       <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-3 text-xs text-emerald-200">
-        Las 4 tablas resultantes cumplen tanto <strong>3FN</strong> como <strong>BCNF</strong>.
+        ✅ Las 4 tablas resultantes cumplen tanto <strong>3FN</strong> como <strong>BCNF</strong>.
       </div>
     </div>
 
+    <!-- ─────────────────────────────────────────────────────
+         EJERCICIO 6 — REFLEXIÓN
+    ───────────────────────────────────────────────────── -->
     <div class="mb-4">
       <div class="flex items-center gap-3 mb-6">
         <span class="px-3 py-1 rounded-full bg-rose-500/20 text-rose-300 text-xs font-semibold uppercase tracking-wider">Ejercicio 6</span>

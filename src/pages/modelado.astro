@@ -9,7 +9,9 @@ import comidas from '@assets/img/comidas.png'
 import imagen1 from '@assets/img/enunciado1.png'
 import imagen2 from '@assets/img/enunciado2.png'
 import imagen3 from '@assets/img/enunciado3.png'
+
 import employees from '@assets/img/employe.png'
+import transportes from '@assets/img/conductor.png'
 ---
 
 <DefaultLayout title="Modelado - Einny Camyla">
@@ -110,26 +112,17 @@ import employees from '@assets/img/employe.png'
         <div class="space-y-5 text-zinc-300 leading-relaxed">
 
           <p>
-            <strong class="text-white">7.1. ENUNCIADO DEL PROBLEMA</strong>
-          </p>
-
-          <p>
-            Se desea abordar la problemática ambiental de los residuos tóxicos y peligrosos cuya incorrecta gestión produce daños de gran importancia en el medio ambiente y en la salud del ser humano.
-          </p>
-
-          <p>
-            La información a contemplar corresponde desde que es producido el residuo por un centro o empresa productora hasta que éste se encuentra en un lugar seguro, en donde recibe un tratamiento especial como puede ser la incineración, almacenamiento en depósitos de seguridad, etc.
-          </p>
-
-          <p>
-            En el sistema de información se desea considerar la información de:
+            Gestión ambiental de residuos tóxicos y peligrosos,
+            incluyendo productores, residuos, empresas transportadoras
+            y traslados.
           </p>
 
           <ul class="list-disc pl-6 space-y-3">
-            <li>Los productores de residuos.</li>
-            <li>Los residuos.</li>
-            <li>Las empresas transportadoras.</li>
-            <li>Los traslados y tratamientos realizados.</li>
+            <li>Un residuo puede tener varios constituyentes químicos.</li>
+            <li>Los residuos pueden transportarse parcial o totalmente.</li>
+            <li>En un traslado participan distintas empresas transportistas.</li>
+            <li>Los residuos reciben tratamientos especiales.</li>
+            <li>Los traslados poseen un único destino.</li>
           </ul>
 
         </div>
@@ -143,7 +136,7 @@ import employees from '@assets/img/employe.png'
         </div>
 
         <p class="mt-6 text-zinc-300">
-          Ingreso al ejercicio en Draw.io:
+          Ingreso al ejercicio:
           <a
             href="https://drive.google.com/file/d/18cFeP9F3HFqef52bL8cAcNfVfMyMgXfb/view?usp=sharing"
             target="_blank"
@@ -174,21 +167,16 @@ import employees from '@assets/img/employe.png'
         <div class="space-y-5 text-zinc-300 leading-relaxed">
 
           <p>
-            Eat’n Go es una empresa dedicada a la comercialización de comidas rápidas.
-          </p>
-
-          <p>
-            La empresa vende pizzas, bocadillos y productos complementarios
-            como refrescos y helados.
+            Eat’n Go es una empresa dedicada a la comercialización
+            de comidas rápidas.
           </p>
 
           <ul class="list-disc pl-6 space-y-3">
-            <li>Los productos pueden incluir distintos ingredientes.</li>
-            <li>Los artículos se venden en diferentes tamaños.</li>
-            <li>Los pedidos pueden ser locales, para recoger o a domicilio.</li>
-            <li>La empresa maneja promociones y regalos.</li>
-            <li>Existen repartidores y scooters para entregas.</li>
-            <li>Los pedidos a domicilio tienen un valor mínimo.</li>
+            <li>Las pizzas y bocadillos poseen ingredientes variables.</li>
+            <li>Los artículos pueden venderse en distintos tamaños.</li>
+            <li>Los pedidos pueden ser locales o a domicilio.</li>
+            <li>Existen promociones y regalos para clientes.</li>
+            <li>La empresa cuenta con repartidores y scooters.</li>
           </ul>
 
         </div>
@@ -200,17 +188,6 @@ import employees from '@assets/img/employe.png'
             class="w-full object-contain rounded-lg"
           />
         </div>
-
-        <p class="mt-6 text-zinc-300">
-          Ingreso al ejercicio:
-          <a
-            href="https://drive.google.com/file/d/18cFeP9F3HFqef52bL8cAcNfVfMyMgXfb/view?usp=sharing"
-            target="_blank"
-            class="text-emerald-400 hover:underline"
-          >
-            Ver archivo
-          </a>
-        </p>
 
       </div>
     </div>
@@ -230,22 +207,18 @@ import employees from '@assets/img/employe.png'
           </h2>
         </div>
 
-        <div class="space-y-5 text-zinc-300 leading-relaxed">
+        <p class="text-zinc-300">
+          El enunciado del problema se presenta dividido en tres partes:
+        </p>
 
-          <p>
-            El enunciado del problema se presenta dividido en tres partes:
-          </p>
-
-        </div>
-
-        <!-- IMÁGENES EN FILA -->
+        <!-- IMAGENES -->
         <div class="grid md:grid-cols-3 gap-6 mt-10">
 
           <div class="bg-white p-4 rounded-xl shadow-lg">
             <Image
               src={imagen1}
               alt="Enunciado parte 1"
-              class="w-full h-full rounded-lg object-contain"
+              class="w-full rounded-lg object-contain"
             />
           </div>
 
@@ -253,7 +226,7 @@ import employees from '@assets/img/employe.png'
             <Image
               src={imagen2}
               alt="Enunciado parte 2"
-              class="w-full h-full rounded-lg object-contain"
+              class="w-full rounded-lg object-contain"
             />
           </div>
 
@@ -261,28 +234,156 @@ import employees from '@assets/img/employe.png'
             <Image
               src={imagen3}
               alt="Enunciado parte 3"
-              class="w-full h-full rounded-lg object-contain"
+              class="w-full rounded-lg object-contain"
             />
           </div>
 
         </div>
+
         <div class="bg-white p-6 rounded-xl shadow-lg mt-10">
           <Image
             src={employees}
-            alt="Modelo ER employees"
+            alt="Modelo ER Employees"
             class="w-full object-contain rounded-lg"
           />
         </div>
-        <p class="mt-6 text-zinc-300">
-          Ingreso al ejercicio:
-          <a
-            href="https://drive.google.com/file/d/18cFeP9F3HFqef52bL8cAcNfVfMyMgXfb/view?usp=sharing"
-            target="_blank"
-            class="text-orange-400 hover:underline"
-          >
-            Ver archivo
-          </a>
-        </p>
+
+      </div>
+    </div>
+
+    <div class="p-[2px] rounded-3xl bg-gradient-to-r from-yellow-500 via-amber-500 to-orange-500 mb-20 shadow-2xl">
+
+      <div class="bg-zinc-900 p-10 rounded-3xl">
+
+        <div class="mb-8">
+          <span class="text-sm uppercase tracking-widest text-yellow-400">
+            Base de Datos
+          </span>
+
+          <h2 class="text-3xl font-bold mt-2 text-white">
+            Modelo 5 — Empresa de Transportes
+          </h2>
+        </div>
+
+        <div class="space-y-5 text-zinc-300 leading-relaxed">
+
+          <p>
+            Sistema para gestionar el reparto de paquetes
+            en una empresa de transportes en Colombia.
+          </p>
+
+          <ul class="list-disc pl-6 space-y-3">
+
+            <li>
+              Los conductores poseen:
+              cédula, nombre, teléfono,
+              dirección, salario y ciudad.
+            </li>
+
+            <li>
+              Los paquetes poseen:
+              código, descripción,
+              destinatario y dirección.
+            </li>
+
+            <li>
+              Un conductor distribuye muchos paquetes.
+            </li>
+
+            <li>
+              Cada paquete llega a una ciudad.
+            </li>
+
+            <li>
+              Los camiones poseen:
+              matrícula, modelo,
+              tipo y potencia.
+            </li>
+
+            <li>
+              Un conductor puede manejar
+              distintos camiones.
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-lg mt-10">
+          <Image
+            src={transportes}
+            alt="Modelo ER Transportes"
+            class="w-full object-contain rounded-lg"
+          />
+        </div>
+
+      </div>
+    </div>
+
+    <!-- MODELO 6 -->
+    <div class="p-[2px] rounded-3xl bg-gradient-to-r from-fuchsia-500 via-pink-500 to-rose-500 mb-20 shadow-2xl">
+
+      <div class="bg-zinc-900 p-10 rounded-3xl">
+
+        <div class="mb-8">
+          <span class="text-sm uppercase tracking-widest text-fuchsia-400">
+            Base de Datos
+          </span>
+
+          <h2 class="text-3xl font-bold mt-2 text-white">
+            Modelo 6 — Bienes Raíces
+          </h2>
+        </div>
+
+        <div class="space-y-5 text-zinc-300 leading-relaxed">
+
+          <p>
+            Sistema de gestión de casas en venta
+            y clientes interesados.
+          </p>
+
+          <ul class="list-disc pl-6 space-y-3">
+
+            <li>
+              Los agentes poseen:
+              nombre completo, cédula,
+              género, fecha de nacimiento
+              y código único.
+            </li>
+
+            <li>
+              Cada casa posee:
+              precio, dirección,
+              propietario y características.
+            </li>
+
+            <li>
+              Las casas pueden tener:
+              dormitorios, baños,
+              calefacción y garaje.
+            </li>
+
+            <li>
+              Los clientes especifican
+              preferencias y rangos de precios.
+            </li>
+
+            <li>
+              Una casa puede estar listada
+              con distintas firmas.
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-lg mt-10">
+          <Image
+            src={employees}
+            alt="Modelo ER Bienes Raíces"
+            class="w-full object-contain rounded-lg"
+          />
+        </div>
 
       </div>
     </div>

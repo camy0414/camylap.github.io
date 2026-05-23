@@ -23,11 +23,15 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
       </a>
 
       <!-- NORMALIZACIÓN -->
-      <div class="p-6 border rounded-xl shadow-sm">
-        <h2 class="text-xl font-semibold mb-2">🧩 Normalización</h2>
-        <p>Próximamente subiré ejercicios y ejemplos de normalización.</p>
-      </div>
-
+      <a 
+        href={`${import.meta.env.BASE_URL}normalizacion/`}
+        class="block p-6 border rounded-xl shadow-sm 
+               hover:shadow-lg hover:scale-[1.02] 
+               transition duration-300 cursor-pointer"
+      >
+        h2 class="text-xl font-semibold mb-2">🧩 Normalización</h2>
+        <p>Ver todos los trabajos y evidencias de normalización de bases de datos.</p>
+      </a>
       <!-- SQL -->
       <div class="p-6 border rounded-xl shadow-sm">
         <h2 class="text-xl font-semibold mb-2">💻 SQL</h2>

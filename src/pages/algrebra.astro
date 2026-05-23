@@ -1,735 +1,151 @@
---- 
-import DefaultLayout from '@layouts/DefaultLayout.astro' 
-import { Image } from 'astro:assets' 
-import aerolinea from '@assets/img/aerolinea.drawio.png' 
-import residuos from '@assets/img/Residuos.png' 
-import comidas from '@assets/img/comidas.png' 
-import imagen1 from '@assets/img/enunciado1.png' 
-import imagen2 from '@assets/img/enunciado2.png' 
-import imagen3 from '@assets/img/enunciado3.png' 
-import p from '@assets/img/p.png' 
-import h from '@assets/img/h.png' 
-import employees from '@assets/img/employe.png' 
-import transportes from '@assets/img/conductor.png' 
-import casa from '@assets/img/casa.png' 
-import total from '@assets/img/total.png' 
-import mer from '@assets/img/mer.png' 
-import mere from '@assets/img/mere.png' 
---- 
-<DefaultLayout title="Normalización - Einny Camyla"> 
-<section class="py-20 container max-w-5xl mx-auto"> 
-
-<div class="text-center mb-16"> 
-<h1 class="text-5xl font-bold mb-4 text-white"> NORMALIZACIÓN </h1> 
-<p class="text-zinc-400 text-lg"> Normalización talleres y ejercicios en clase </p> </div>
-<div class="p-[2px] rounded-3xl bg-gradient-to-r from-violet-600 via-purple-500 to-fuchsia-500 mb-20 shadow-2xl">
+<div class="p-[2px] rounded-3xl bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-500 mb-20 shadow-2xl">
   <div class="bg-zinc-900 p-10 rounded-3xl">
 
-<div class="p-[2px] rounded-3xl bg-gradient-to-r from-cyan-600 via-blue-500 to-indigo-500 mb-20 shadow-2xl">
-  <div class="bg-zinc-900 p-10 rounded-3xl">
-
-    <div class="mb-8">
-      <span class="text-sm uppercase tracking-widest text-cyan-400">
-        Material previo del taller
-      </span>
-      <h2 class="text-3xl font-bold mt-2 text-white">
-        Ejercicio base (PDF + Solución en Excel)
-      </h2>
-      <p class="text-zinc-400 text-sm mt-2">
-        Enunciado del ejercicio y su solución en hoja de cálculo
-      </p>
-    </div>
-
-    <!-- PDF -->
     <div class="mb-10">
-      <h3 class="text-lg font-semibold text-white mb-3">📄 Enunciado en PDF</h3>
-
-      <iframe
-        src="/Taller_Avanado_Normalizacion_A.pdf"
-        class="w-full h-[600px] rounded-xl border border-zinc-700"
-      ></iframe>
-
-      <p class="text-zinc-500 text-xs mt-2">
-        Si no se visualiza, puedes descargar el archivo directamente.
+      <span class="text-sm uppercase tracking-widest text-emerald-400">Taller Evaluativo · Universidad El Bosque</span>
+      <h2 class="text-3xl font-bold mt-2 text-white">Taller de Álgebra Relacional</h2>
+      <p class="text-zinc-400 mt-2 text-sm">
+        Por: Einny Camyla Poveda García y Sebastián Pérez Herrera · Docente: Ing. Christian Felipe Duarte Arévalo · Bases de Datos 1
       </p>
     </div>
 
-    <div>
-      <h3 class="text-lg font-semibold text-white mb-3">📊 Solución en Excel</h3>
-
-      <div class="bg-zinc-800 border border-zinc-700 rounded-xl p-6 flex flex-col md:flex-row items-center justify-between gap-4">
-        
-        <div>
-          <p class="text-zinc-300 text-sm">
-            Archivo con la solución del ejercicio en formato Excel.
-          </p>
-          <p class="text-zinc-500 text-xs mt-1">
-            Incluye tablas normalizadas y resultados finales.
-          </p>
-        </div>
-
-        <a
-          href="/taller normalizacion.xlsx"
-          download
-          class="px-5 py-2 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white font-semibold transition"
-        >
-          Descargar Excel
-        </a>
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-semibold uppercase tracking-wider">Relaciones base</span>
+        <h3 class="text-lg font-semibold text-white">Esquema relacional dado</h3>
+      </div>
+      <div class="bg-zinc-800/60 rounded-xl border border-zinc-700 p-5 font-mono text-xs text-zinc-300 space-y-2">
+        <p><span class="text-yellow-400">empleado</span>(<span class="text-yellow-300">cod_emp</span>, nombre_empleado, calle, ciudad)</p>
+        <p><span class="text-yellow-400">trabaja</span>(<span class="text-yellow-300">cod_emp</span>, <span class="text-yellow-300">cod_uni</span>, sueldo_mensual)</p>
+        <p><span class="text-yellow-400">Universidad</span>(<span class="text-yellow-300">cod_uni</span>, nombre_uni, ciudad_uni)</p>
+        <p><span class="text-yellow-400">jefe</span>(<span class="text-yellow-300">cod_jefe</span>, nombre_jefe, calle, ciudad)</p>
       </div>
     </div>
 
-  </div>
-</div>
----
-// TallerNormalizacion_Resuelto.astro
-// Pega este bloque dentro del <section> de tu página de Normalización
----
-
-<!-- ═══════════════════════════════════════════════════════════
-     TALLER DE NORMALIZACIÓN — RESUELTO
-═══════════════════════════════════════════════════════════ -->
-<div class="p-[2px] rounded-3xl bg-gradient-to-r from-violet-600 via-purple-500 to-fuchsia-500 mb-20 shadow-2xl">
-  <div class="bg-zinc-900 p-10 rounded-3xl">
-
-    <!-- HEADER -->
     <div class="mb-10">
-      <span class="text-sm uppercase tracking-widest text-violet-400">Taller Evaluativo · Universidad El Bosque</span>
-      <h2 class="text-3xl font-bold mt-2 text-white">Taller de Normalización de BD</h2>
-      <p class="text-zinc-400 mt-2 text-sm">Docente: Ing. Christian Felipe Duarte Arévalo · Bases de Datos 1</p>
-    </div>
-
-    <!-- ─────────────────────────────────────────────────────
-         EJERCICIO 1 — TABLA PROYECTOS/EMPLEADOS
-    ───────────────────────────────────────────────────── -->
-    <div class="mb-16">
-      <div class="flex items-center gap-3 mb-6">
-        <span class="px-3 py-1 rounded-full bg-violet-500/20 text-violet-300 text-xs font-semibold uppercase tracking-wider">Ejercicio 1</span>
-        <h3 class="text-xl font-semibold text-white">Tabla de Proyectos y Empleados</h3>
+      <div class="flex items-center gap-3 mb-4">
+        <span class="px-3 py-1 rounded-full bg-teal-500/20 text-teal-300 text-xs font-semibold uppercase tracking-wider">Ejercicio 1</span>
+        <h3 class="text-base font-semibold text-white">Empleados que trabajan para la Universidad Central</h3>
       </div>
-
-      <!-- Tabla original -->
-      <p class="text-zinc-400 text-xs uppercase tracking-widest mb-2">Tabla No. 1 — Datos originales</p>
-      <div class="overflow-x-auto rounded-xl border border-zinc-700 mb-6">
-        <table class="w-full text-sm text-zinc-300">
-          <thead><tr class="bg-zinc-800 text-violet-300 text-xs uppercase tracking-wider">
-            <th class="px-4 py-3 text-left">cod_proyecto</th><th class="px-4 py-3 text-left">nom_proyecto</th>
-            <th class="px-4 py-3 text-left">cod_empleado</th><th class="px-4 py-3 text-left">nom_empleado</th>
-            <th class="px-4 py-3 text-left">profesion</th><th class="px-4 py-3 text-left">vlr_hora</th>
-            <th class="px-4 py-3 text-left">hrs_asignadas</th>
-          </tr></thead>
-          <tbody class="divide-y divide-zinc-800 text-xs">
-            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">1010</td><td class="px-4 py-2">ERP</td><td class="px-4 py-2">2010</td><td class="px-4 py-2">Sandra</td><td class="px-4 py-2">Ingeniero</td><td class="px-4 py-2">100.000</td><td class="px-4 py-2">20</td></tr>
-            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2 text-zinc-500">1010*</td><td class="px-4 py-2">ERP</td><td class="px-4 py-2">2020</td><td class="px-4 py-2">Claudia</td><td class="px-4 py-2">Analista</td><td class="px-4 py-2">50.000</td><td class="px-4 py-2">10</td></tr>
-            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">1010</td><td class="px-4 py-2">ERP</td><td class="px-4 py-2">2030</td><td class="px-4 py-2">Yamyle</td><td class="px-4 py-2">Programador</td><td class="px-4 py-2">20.000</td><td class="px-4 py-2">10</td></tr>
-            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">1020</td><td class="px-4 py-2">CRM</td><td class="px-4 py-2">2010</td><td class="px-4 py-2">Sandra</td><td class="px-4 py-2">Ingeniero</td><td class="px-4 py-2">100.000</td><td class="px-4 py-2">10</td></tr>
-            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">1020</td><td class="px-4 py-2 text-zinc-500">CRM*</td><td class="px-4 py-2">2020</td><td class="px-4 py-2">Claudia</td><td class="px-4 py-2">Analista</td><td class="px-4 py-2">50.000</td><td class="px-4 py-2">15</td></tr>
-            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2 text-zinc-500">1020*</td><td class="px-4 py-2">CRM</td><td class="px-4 py-2">2030</td><td class="px-4 py-2">Yamile</td><td class="px-4 py-2">Programador</td><td class="px-4 py-2">20.000</td><td class="px-4 py-2">20</td></tr>
-            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">1030</td><td class="px-4 py-2">BI</td><td class="px-4 py-2">2010</td><td class="px-4 py-2">Sandra</td><td class="px-4 py-2">Ingeniero</td><td class="px-4 py-2">100.000</td><td class="px-4 py-2">10</td></tr>
-            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2 text-zinc-500">1030*</td><td class="px-4 py-2">BI</td><td class="px-4 py-2">2020</td><td class="px-4 py-2">Claudia</td><td class="px-4 py-2">Analista</td><td class="px-4 py-2">50.000</td><td class="px-4 py-2">15</td></tr>
-            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">1030</td><td class="px-4 py-2 text-zinc-500">BI*</td><td class="px-4 py-2">2030</td><td class="px-4 py-2">Llamile</td><td class="px-4 py-2">Programador</td><td class="px-4 py-2">20.000</td><td class="px-4 py-2">10</td></tr>
-            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">1010</td><td class="px-4 py-2">ERP</td><td class="px-4 py-2">2040</td><td class="px-4 py-2">Andrea</td><td class="px-4 py-2">Ingeniero</td><td class="px-4 py-2">100.000</td><td class="px-4 py-2">40</td></tr>
-          </tbody>
-        </table>
+      <p class="text-zinc-400 text-sm mb-3">Averiguar los <strong class="text-white">nombres</strong> de todos los empleados que trabajan para la Universidad Central.</p>
+      <div class="bg-zinc-800/50 border border-zinc-700 rounded-xl p-4 font-mono text-xs text-emerald-300 leading-relaxed">
+        π <span class="text-white">nombre_empleado</span> (empleado ⋈ trabaja ⋈ ρ<sub class="text-zinc-400">uni(ciudad_uni)</sub> (σ <span class="text-amber-300">nombre_uni = 'Universidad Central'</span> (Universidad)))
       </div>
-
-      <!-- Respuesta forma normal -->
-      <div class="bg-violet-500/10 border border-violet-500/30 rounded-xl p-5 mb-6">
-        <p class="text-violet-300 font-semibold text-sm mb-2">📌 Forma normal actual: 1FN (incompleta / con anomalías)</p>
-        <p class="text-zinc-300 text-sm leading-relaxed">
-          La tabla tiene una clave compuesta implícita <span class="font-mono text-violet-300 text-xs bg-zinc-800 px-1 rounded">(cod_proyecto, cod_empleado)</span>.
-          Cumple 1FN porque todos los atributos son atómicos y no hay grupos repetidos. Sin embargo,
-          <strong class="text-white">NO está en 2FN</strong> porque existen dependencias parciales:
-          <span class="font-mono text-violet-300 text-xs bg-zinc-800 px-1 rounded">nom_proyecto</span> depende solo de <span class="font-mono text-violet-300 text-xs bg-zinc-800 px-1 rounded">cod_proyecto</span>, y
-          <span class="font-mono text-violet-300 text-xs bg-zinc-800 px-1 rounded">nom_empleado, profesion, vlr_hora</span> dependen solo de <span class="font-mono text-violet-300 text-xs bg-zinc-800 px-1 rounded">cod_empleado</span>.
-          Además, <span class="font-mono text-violet-300 text-xs bg-zinc-800 px-1 rounded">vlr_hora</span> depende de <span class="font-mono text-violet-300 text-xs bg-zinc-800 px-1 rounded">profesion</span> (dependencia transitiva), lo que viola la 3FN.
-          Se observan también celdas vacías (<span class="text-zinc-500">*</span>) que indican valores nulos, lo que refleja anomalías de inserción.
-        </p>
-      </div>
-
-      <!-- Paso a paso normalización -->
-      <p class="text-zinc-400 text-xs uppercase tracking-widest mb-4">Proceso de normalización paso a paso</p>
-
-      <!-- 1FN -->
-      <div class="border border-zinc-700 rounded-xl p-5 mb-4">
-        <div class="flex items-center gap-2 mb-3">
-          <span class="w-6 h-6 rounded-full bg-zinc-700 text-zinc-300 text-xs flex items-center justify-center font-bold">1</span>
-          <p class="text-white font-semibold text-sm">Primera Forma Normal (1FN) — Cumplida</p>
-        </div>
-        <p class="text-zinc-300 text-sm leading-relaxed">
-          Todos los atributos contienen valores atómicos y no hay grupos repetidos. La tabla ya está en 1FN.
-          Se asume que las celdas vacías corresponden a valores nulos permitidos (no a grupos repetidos).
-          Clave primaria compuesta: <span class="font-mono text-violet-300 text-xs bg-zinc-800 px-1 rounded">(cod_proyecto, cod_empleado)</span>.
-        </p>
-      </div>
-
-      <!-- 2FN -->
-      <div class="border border-zinc-700 rounded-xl p-5 mb-4">
-        <div class="flex items-center gap-2 mb-3">
-          <span class="w-6 h-6 rounded-full bg-zinc-700 text-zinc-300 text-xs flex items-center justify-center font-bold">2</span>
-          <p class="text-white font-semibold text-sm">Segunda Forma Normal (2FN) — Eliminar dependencias parciales</p>
-        </div>
-        <p class="text-zinc-300 text-sm leading-relaxed mb-4">
-          Se identifican las dependencias parciales respecto a la clave compuesta y se separan en tablas independientes:
-        </p>
-        <div class="grid md:grid-cols-3 gap-3">
-          <div class="bg-zinc-800 rounded-lg p-4">
-            <p class="text-violet-300 text-xs font-semibold mb-2 uppercase tracking-wider">PROYECTOS</p>
-            <p class="text-zinc-300 text-xs font-mono"><span class="text-yellow-400">cod_proyecto</span> (PK)</p>
-            <p class="text-zinc-300 text-xs font-mono">nom_proyecto</p>
-          </div>
-          <div class="bg-zinc-800 rounded-lg p-4">
-            <p class="text-violet-300 text-xs font-semibold mb-2 uppercase tracking-wider">EMPLEADOS</p>
-            <p class="text-zinc-300 text-xs font-mono"><span class="text-yellow-400">cod_empleado</span> (PK)</p>
-            <p class="text-zinc-300 text-xs font-mono">nom_empleado</p>
-            <p class="text-zinc-300 text-xs font-mono">profesion</p>
-            <p class="text-zinc-300 text-xs font-mono">vlr_hora</p>
-          </div>
-          <div class="bg-zinc-800 rounded-lg p-4">
-            <p class="text-violet-300 text-xs font-semibold mb-2 uppercase tracking-wider">ASIGNACIONES</p>
-            <p class="text-zinc-300 text-xs font-mono"><span class="text-yellow-400">cod_proyecto</span> (PK, FK)</p>
-            <p class="text-zinc-300 text-xs font-mono"><span class="text-yellow-400">cod_empleado</span> (PK, FK)</p>
-            <p class="text-zinc-300 text-xs font-mono">hrs_asignadas</p>
-          </div>
-        </div>
-        <p class="text-zinc-400 text-xs mt-3">
-          Decisión: <span class="text-zinc-300">hrs_asignadas depende de AMBOS atributos de la clave compuesta (de qué empleado trabaja en qué proyecto), por lo que permanece en la tabla de ASIGNACIONES.</span>
-        </p>
-      </div>
-
-      <!-- 3FN -->
-      <div class="border border-zinc-700 rounded-xl p-5 mb-4">
-        <div class="flex items-center gap-2 mb-3">
-          <span class="w-6 h-6 rounded-full bg-violet-600 text-white text-xs flex items-center justify-center font-bold">3</span>
-          <p class="text-white font-semibold text-sm">Tercera Forma Normal (3FN) — Eliminar dependencias transitivas</p>
-        </div>
-        <p class="text-zinc-300 text-sm leading-relaxed mb-4">
-          En la tabla EMPLEADOS existe la dependencia transitiva:
-          <span class="font-mono text-violet-300 text-xs bg-zinc-800 px-1 rounded">cod_empleado → profesion → vlr_hora</span>.
-          El valor por hora lo determina la profesión, no directamente el empleado.
-          Se extrae en una tabla aparte:
-        </p>
-        <div class="grid md:grid-cols-3 gap-3">
-          <div class="bg-zinc-800 rounded-lg p-4">
-            <p class="text-emerald-400 text-xs font-semibold mb-2 uppercase tracking-wider">PROYECTOS ✓</p>
-            <p class="text-zinc-300 text-xs font-mono"><span class="text-yellow-400">cod_proyecto</span> (PK)</p>
-            <p class="text-zinc-300 text-xs font-mono">nom_proyecto</p>
-          </div>
-          <div class="bg-zinc-800 rounded-lg p-4">
-            <p class="text-emerald-400 text-xs font-semibold mb-2 uppercase tracking-wider">EMPLEADOS ✓</p>
-            <p class="text-zinc-300 text-xs font-mono"><span class="text-yellow-400">cod_empleado</span> (PK)</p>
-            <p class="text-zinc-300 text-xs font-mono">nom_empleado</p>
-            <p class="text-zinc-300 text-xs font-mono"><span class="text-blue-400">profesion</span> (FK)</p>
-          </div>
-          <div class="bg-zinc-800 rounded-lg p-4">
-            <p class="text-emerald-400 text-xs font-semibold mb-2 uppercase tracking-wider">PROFESIONES ✓</p>
-            <p class="text-zinc-300 text-xs font-mono"><span class="text-yellow-400">profesion</span> (PK)</p>
-            <p class="text-zinc-300 text-xs font-mono">vlr_hora</p>
-          </div>
-        </div>
-        <div class="bg-zinc-800 rounded-lg p-4 mt-3 max-w-xs">
-          <p class="text-emerald-400 text-xs font-semibold mb-2 uppercase tracking-wider">ASIGNACIONES ✓</p>
-          <p class="text-zinc-300 text-xs font-mono"><span class="text-yellow-400">cod_proyecto</span> (PK, FK)</p>
-          <p class="text-zinc-300 text-xs font-mono"><span class="text-yellow-400">cod_empleado</span> (PK, FK)</p>
-          <p class="text-zinc-300 text-xs font-mono">hrs_asignadas</p>
-        </div>
-        <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-3 mt-4 text-xs text-emerald-200">
-          ✅ Con estas 4 tablas el esquema está en <strong>3FN</strong>: todos los atributos no clave dependen única y directamente de su llave primaria.
-        </div>
+      <div class="mt-3 bg-zinc-800/30 rounded-lg p-3 text-xs text-zinc-400 border border-zinc-800">
+        <span class="text-zinc-300 font-semibold">Explicación: </span>
+        Se filtra Universidad por nombre, se renombra la columna de ciudad para evitar ambigüedad al hacer join, se encadenan los tres join naturales y finalmente se proyecta solo el nombre del empleado.
       </div>
     </div>
 
-    <!-- ─────────────────────────────────────────────────────
-         EJERCICIO 2 — TABLA ESTUDIANTES
-    ───────────────────────────────────────────────────── -->
-    <div class="mb-16">
-      <div class="flex items-center gap-3 mb-6">
-        <span class="px-3 py-1 rounded-full bg-fuchsia-500/20 text-fuchsia-300 text-xs font-semibold uppercase tracking-wider">Ejercicio 2</span>
-        <h3 class="text-xl font-semibold text-white">Tabla de Estudiantes — 1NF</h3>
+    <!-- EJ 2 -->
+    <div class="mb-10">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="px-3 py-1 rounded-full bg-teal-500/20 text-teal-300 text-xs font-semibold uppercase tracking-wider">Ejercicio 2</span>
+        <h3 class="text-base font-semibold text-white">Empleados de la Universidad de Los Andes con ciudad de residencia</h3>
       </div>
-
-      <div class="overflow-x-auto rounded-xl border border-zinc-700 mb-5">
-        <table class="w-full text-sm text-zinc-300">
-          <thead><tr class="bg-zinc-800 text-fuchsia-300 text-xs uppercase tracking-wider">
-            <th class="px-4 py-3 text-left">Cod</th><th class="px-4 py-3 text-left">Name</th>
-            <th class="px-4 py-3 text-left">Email</th><th class="px-4 py-3 text-left">Courses</th>
-            <th class="px-4 py-3 text-left">GradePoints</th>
-          </tr></thead>
-          <tbody class="divide-y divide-zinc-800 text-xs">
-            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">100111</td><td class="px-4 py-2">John Doe</td><td class="px-4 py-2">doe@usna.edu</td><td class="px-4 py-2 text-amber-400">NN204, SI204, IT221</td><td class="px-4 py-2 text-amber-400">2, 3, 3</td></tr>
-            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">092244</td><td class="px-4 py-2">Matt Smith</td><td class="px-4 py-2">smith@usna.edu</td><td class="px-4 py-2 text-amber-400">SM223, EE301</td><td class="px-4 py-2 text-amber-400">4, 4</td></tr>
-            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">113221</td><td class="px-4 py-2">Melinda Black</td><td class="px-4 py-2">black@usna.edu</td><td class="px-4 py-2">SI204</td><td class="px-4 py-2">3</td></tr>
-            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">090112</td><td class="px-4 py-2">Tom Johnson</td><td class="px-4 py-2">johnson@usna.edu</td><td class="px-4 py-2 text-amber-400">NN204, SI204, IT221</td><td class="px-4 py-2 text-amber-400">4, 2, 3</td></tr>
-          </tbody>
-        </table>
+      <p class="text-zinc-400 text-sm mb-3">Averiguar el <strong class="text-white">nombre y ciudad de residencia</strong> de todos los empleados que trabajan para la Universidad de Los Andes.</p>
+      <div class="bg-zinc-800/50 border border-zinc-700 rounded-xl p-4 font-mono text-xs text-emerald-300 leading-relaxed">
+        π <span class="text-white">nombre_empleado, ciudad</span> (empleado ⋈ trabaja ⋈ ρ<sub class="text-zinc-400">uni(ciudad_uni)</sub> (σ <span class="text-amber-300">nombre_uni = 'Universidad de Los Andes'</span> (Universidad)))
       </div>
-
-      <div class="bg-red-500/10 border border-red-500/30 rounded-xl p-5 mb-6">
-        <p class="text-red-300 font-semibold text-sm mb-2">❌ La tabla NO está en 1FN</p>
-        <p class="text-zinc-300 text-sm leading-relaxed">
-          Las columnas <span class="font-mono text-amber-400 text-xs bg-zinc-800 px-1 rounded">Courses</span> y
-          <span class="font-mono text-amber-400 text-xs bg-zinc-800 px-1 rounded">GradePoints</span> contienen múltiples valores en una sola celda (listas separadas por comas).
-          Esto viola el principio de atomicidad de la 1FN, que exige que cada celda contenga un único valor indivisible.
-          Además, los valores están relacionados posicionalmente (el primer curso corresponde al primer punto, etc.),
-          lo que genera una dependencia implícita entre columnas que dificulta las consultas y el mantenimiento.
-        </p>
-      </div>
-
-      <p class="text-zinc-400 text-xs uppercase tracking-widest mb-4">Rediseño en 1FN — Tablas resultantes</p>
-
-      <div class="grid md:grid-cols-2 gap-4 mb-4">
-        <!-- Tabla ESTUDIANTES -->
-        <div>
-          <p class="text-fuchsia-300 text-xs font-semibold mb-2 uppercase tracking-wider">Tabla: ESTUDIANTES</p>
-          <div class="overflow-x-auto rounded-xl border border-zinc-700">
-            <table class="w-full text-xs text-zinc-300">
-              <thead><tr class="bg-zinc-800 text-fuchsia-300 uppercase tracking-wider">
-                <th class="px-3 py-2 text-left">Cod (PK)</th><th class="px-3 py-2 text-left">Name</th><th class="px-3 py-2 text-left">Email</th>
-              </tr></thead>
-              <tbody class="divide-y divide-zinc-800">
-                <tr class="hover:bg-zinc-800/50"><td class="px-3 py-2 text-yellow-400">100111</td><td class="px-3 py-2">John Doe</td><td class="px-3 py-2">doe@usna.edu</td></tr>
-                <tr class="hover:bg-zinc-800/50"><td class="px-3 py-2 text-yellow-400">092244</td><td class="px-3 py-2">Matt Smith</td><td class="px-3 py-2">smith@usna.edu</td></tr>
-                <tr class="hover:bg-zinc-800/50"><td class="px-3 py-2 text-yellow-400">113221</td><td class="px-3 py-2">Melinda Black</td><td class="px-3 py-2">black@usna.edu</td></tr>
-                <tr class="hover:bg-zinc-800/50"><td class="px-3 py-2 text-yellow-400">090112</td><td class="px-3 py-2">Tom Johnson</td><td class="px-3 py-2">johnson@usna.edu</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="text-zinc-500 text-xs mt-1">PK: Cod</p>
-        </div>
-
-        <!-- Tabla MATRICULAS -->
-        <div>
-          <p class="text-fuchsia-300 text-xs font-semibold mb-2 uppercase tracking-wider">Tabla: MATRICULAS</p>
-          <div class="overflow-x-auto rounded-xl border border-zinc-700">
-            <table class="w-full text-xs text-zinc-300">
-              <thead><tr class="bg-zinc-800 text-fuchsia-300 uppercase tracking-wider">
-                <th class="px-3 py-2 text-left">Cod (PK, FK)</th><th class="px-3 py-2 text-left">Course (PK)</th><th class="px-3 py-2 text-left">GradePoint</th>
-              </tr></thead>
-              <tbody class="divide-y divide-zinc-800">
-                <tr class="hover:bg-zinc-800/50"><td class="px-3 py-2 text-yellow-400">100111</td><td class="px-3 py-2 text-yellow-400">NN204</td><td class="px-3 py-2">2</td></tr>
-                <tr class="hover:bg-zinc-800/50"><td class="px-3 py-2 text-yellow-400">100111</td><td class="px-3 py-2 text-yellow-400">SI204</td><td class="px-3 py-2">3</td></tr>
-                <tr class="hover:bg-zinc-800/50"><td class="px-3 py-2 text-yellow-400">100111</td><td class="px-3 py-2 text-yellow-400">IT221</td><td class="px-3 py-2">3</td></tr>
-                <tr class="hover:bg-zinc-800/50"><td class="px-3 py-2 text-yellow-400">092244</td><td class="px-3 py-2 text-yellow-400">SM223</td><td class="px-3 py-2">4</td></tr>
-                <tr class="hover:bg-zinc-800/50"><td class="px-3 py-2 text-yellow-400">092244</td><td class="px-3 py-2 text-yellow-400">EE301</td><td class="px-3 py-2">4</td></tr>
-                <tr class="hover:bg-zinc-800/50"><td class="px-3 py-2 text-yellow-400">113221</td><td class="px-3 py-2 text-yellow-400">SI204</td><td class="px-3 py-2">3</td></tr>
-                <tr class="hover:bg-zinc-800/50"><td class="px-3 py-2 text-yellow-400">090112</td><td class="px-3 py-2 text-yellow-400">NN204</td><td class="px-3 py-2">4</td></tr>
-                <tr class="hover:bg-zinc-800/50"><td class="px-3 py-2 text-yellow-400">090112</td><td class="px-3 py-2 text-yellow-400">SI204</td><td class="px-3 py-2">2</td></tr>
-                <tr class="hover:bg-zinc-800/50"><td class="px-3 py-2 text-yellow-400">090112</td><td class="px-3 py-2 text-yellow-400">IT221</td><td class="px-3 py-2">3</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="text-zinc-500 text-xs mt-1">PK: (Cod, Course) · FK: Cod → ESTUDIANTES</p>
-        </div>
-      </div>
-
-      <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-3 text-xs text-emerald-200">
-        ✅ Con esta descomposición cada celda tiene un valor atómico. La tabla ESTUDIANTES contiene datos únicos del estudiante y MATRICULAS registra cada curso con su nota de forma individual, cumpliendo <strong>1FN</strong>.
+      <div class="mt-3 bg-zinc-800/30 rounded-lg p-3 text-xs text-zinc-400 border border-zinc-800">
+        <span class="text-zinc-300 font-semibold">Explicación: </span>
+        Misma estructura que el ejercicio 1, cambiando el filtro de selección y proyectando adicionalmente la <span class="font-mono text-xs bg-zinc-800 px-1 rounded">ciudad</span> del empleado.
       </div>
     </div>
 
-    <!-- ─────────────────────────────────────────────────────
-         EJERCICIO 3 — RESTAURANTE / MEMBER_DINNER
-    ───────────────────────────────────────────────────── -->
-    <div class="mb-16">
-      <div class="flex items-center gap-3 mb-6">
-        <span class="px-3 py-1 rounded-full bg-pink-500/20 text-pink-300 text-xs font-semibold uppercase tracking-wider">Ejercicio 3</span>
-        <h3 class="text-xl font-semibold text-white">Restaurante Nocturno — Member_Dinner</h3>
+    <!-- EJ 3 -->
+    <div class="mb-10">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="px-3 py-1 rounded-full bg-teal-500/20 text-teal-300 text-xs font-semibold uppercase tracking-wider">Ejercicio 3</span>
+        <h3 class="text-base font-semibold text-white">Empleados de la U. Central que ganan más de $25.000.000 anuales</h3>
       </div>
-
-      <p class="text-zinc-300 text-sm leading-relaxed mb-5">
-        La clave primaria compuesta es <span class="font-mono text-pink-300 text-xs bg-zinc-800 px-1 rounded">(MemberNo, DinnerNo)</span>.
-        Cada cena puede tener múltiples platos. Se desea registrar qué miembros asisten a qué cenas y qué platos se sirven.
-      </p>
-
-      <!-- Valores multivaluados -->
-      <div class="bg-amber-500/10 border border-amber-500/30 rounded-xl p-5 mb-6">
-        <p class="text-amber-300 font-semibold text-sm mb-2">⚠ Valores multivaluados identificados</p>
-        <p class="text-zinc-300 text-sm leading-relaxed">
-          El atributo <strong class="text-amber-300">Dishes</strong> (platos de la cena) es multivaluado:
-          una cena puede incluir muchos platos, y cada plato tiene sus propios atributos (nombre, descripción, precio).
-          Si se almacenaran los platos en una sola columna separada por comas, violaría la 1FN.
-          Debe descomponerse en una tabla separada.
-        </p>
+      <p class="text-zinc-400 text-sm mb-3">Averiguar el <strong class="text-white">nombre, calle y ciudad</strong> de empleados de la Universidad Central con salario anual mayor a $25.000.000.</p>
+      <div class="bg-zinc-800/50 border border-zinc-700 rounded-xl p-4 font-mono text-xs text-emerald-300 leading-relaxed">
+        π <span class="text-white">nombre_empleado, calle, ciudad</span> (empleado ⋈ (σ <span class="text-amber-300">sueldo_mensual * 12 > 25000000</span> (trabaja ⋈ (ρ<sub class="text-zinc-400">uni(ciudad_uni)</sub> σ <span class="text-amber-300">nombre_uni = 'Universidad Central'</span> (Universidad)))))
       </div>
-
-      <!-- Esquema relacional 1FN -->
-      <p class="text-zinc-400 text-xs uppercase tracking-widest mb-4">Esquema relacional en 1FN</p>
-      <div class="bg-zinc-800/60 rounded-xl p-5 font-mono text-xs text-zinc-300 mb-6 space-y-2 border border-zinc-700">
-        <p><span class="text-yellow-400">MEMBER_DINNER</span>(<span class="text-yellow-300">MemberNo</span>, <span class="text-yellow-300">DinnerNo</span>, MemberName, MemberAddress, DinnerDate, DinnerVenue, DishNo, DishName, DishDescription)</p>
-        <p class="text-zinc-500">// Clave primaria compuesta: (MemberNo, DinnerNo, DishNo)</p>
-      </div>
-
-      <!-- Dependencias funcionales -->
-      <p class="text-zinc-400 text-xs uppercase tracking-widest mb-3">Dependencias funcionales identificadas</p>
-      <div class="grid sm:grid-cols-2 gap-2 font-mono text-xs text-zinc-300 mb-6">
-        <div class="bg-zinc-800 rounded-lg px-3 py-2">MemberNo → MemberName, MemberAddress</div>
-        <div class="bg-zinc-800 rounded-lg px-3 py-2">DinnerNo → DinnerDate, DinnerVenue</div>
-        <div class="bg-zinc-800 rounded-lg px-3 py-2">DishNo → DishName, DishDescription</div>
-        <div class="bg-zinc-800 rounded-lg px-3 py-2">(MemberNo, DinnerNo) → asistencia</div>
-      </div>
-
-      <!-- Diagrama DF -->
-      <p class="text-zinc-400 text-xs uppercase tracking-widest mb-4">Diagrama de dependencias funcionales (1FN)</p>
-      <div class="bg-zinc-800/40 rounded-xl border border-zinc-700 p-6 mb-6 text-xs font-mono text-zinc-300 leading-loose">
-        <p class="text-pink-300 font-bold mb-3">(MemberNo, DinnerNo, DishNo) ← Clave primaria</p>
-        <p>MemberNo ──────────────→ MemberName, MemberAddress <span class="text-amber-400">(dep. parcial)</span></p>
-        <p>DinnerNo ──────────────→ DinnerDate, DinnerVenue <span class="text-amber-400">(dep. parcial)</span></p>
-        <p>DishNo ────────────────→ DishName, DishDescription <span class="text-amber-400">(dep. parcial)</span></p>
-        <p>(MemberNo, DinnerNo) ─→ asistencia <span class="text-emerald-400">(dep. completa)</span></p>
-      </div>
-
-      <!-- 3FN -->
-      <p class="text-zinc-400 text-xs uppercase tracking-widest mb-4">Conversión a 3FN</p>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-3 mb-4">
-        <div class="bg-zinc-800 rounded-lg p-4">
-          <p class="text-pink-300 text-xs font-semibold mb-2 uppercase tracking-wider">MEMBERS</p>
-          <p class="text-zinc-300 text-xs font-mono"><span class="text-yellow-400">MemberNo</span> (PK)</p>
-          <p class="text-zinc-300 text-xs font-mono">MemberName</p>
-          <p class="text-zinc-300 text-xs font-mono">MemberAddress</p>
-        </div>
-        <div class="bg-zinc-800 rounded-lg p-4">
-          <p class="text-pink-300 text-xs font-semibold mb-2 uppercase tracking-wider">DINNERS</p>
-          <p class="text-zinc-300 text-xs font-mono"><span class="text-yellow-400">DinnerNo</span> (PK)</p>
-          <p class="text-zinc-300 text-xs font-mono">DinnerDate</p>
-          <p class="text-zinc-300 text-xs font-mono">DinnerVenue</p>
-        </div>
-        <div class="bg-zinc-800 rounded-lg p-4">
-          <p class="text-pink-300 text-xs font-semibold mb-2 uppercase tracking-wider">DISHES</p>
-          <p class="text-zinc-300 text-xs font-mono"><span class="text-yellow-400">DishNo</span> (PK)</p>
-          <p class="text-zinc-300 text-xs font-mono">DishName</p>
-          <p class="text-zinc-300 text-xs font-mono">DishDescription</p>
-        </div>
-        <div class="bg-zinc-800 rounded-lg p-4">
-          <p class="text-pink-300 text-xs font-semibold mb-2 uppercase tracking-wider">ATTENDANCE</p>
-          <p class="text-zinc-300 text-xs font-mono"><span class="text-yellow-400">MemberNo</span> (PK, FK)</p>
-          <p class="text-zinc-300 text-xs font-mono"><span class="text-yellow-400">DinnerNo</span> (PK, FK)</p>
-          <p class="text-zinc-300 text-xs font-mono"><span class="text-yellow-400">DishNo</span> (PK, FK)</p>
-        </div>
-      </div>
-      <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-3 text-xs text-emerald-200">
-        ✅ Las 4 tablas están en <strong>3FN</strong>: no hay dependencias parciales ni transitivas. Cada atributo no clave depende directamente de la llave primaria de su tabla.
+      <div class="mt-3 bg-zinc-800/30 rounded-lg p-3 text-xs text-zinc-400 border border-zinc-800">
+        <span class="text-zinc-300 font-semibold">Explicación: </span>
+        La condición de sueldo anual se aplica con <span class="font-mono text-xs bg-zinc-800 px-1 rounded">sueldo_mensual * 12 &gt; 25000000</span> sobre la relación <em>trabaja</em> ya unida con Universidad filtrada. Luego se hace join con empleado y se proyectan los tres atributos requeridos.
       </div>
     </div>
 
-    <!-- ─────────────────────────────────────────────────────
-         EJERCICIO 4 — VISITAS MÉDICAS
-    ───────────────────────────────────────────────────── -->
-    <div class="mb-16">
-      <div class="flex items-center gap-3 mb-6">
-        <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-semibold uppercase tracking-wider">Ejercicio 4</span>
-        <h3 class="text-xl font-semibold text-white">Tabla de Visitas Médicas — 3FN</h3>
+    <!-- EJ 4 -->
+    <div class="mb-10">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="px-3 py-1 rounded-full bg-teal-500/20 text-teal-300 text-xs font-semibold uppercase tracking-wider">Ejercicio 4</span>
+        <h3 class="text-base font-semibold text-white">Empleados que viven en la misma ciudad que su universidad</h3>
       </div>
-
-      <div class="overflow-x-auto rounded-xl border border-zinc-700 mb-5">
-        <table class="w-full text-xs text-zinc-300">
-          <thead><tr class="bg-zinc-800 text-indigo-300 uppercase tracking-wider">
-            <th class="px-4 py-3 text-left">VisitaNo</th><th class="px-4 py-3 text-left">DiaVisita</th>
-            <th class="px-4 py-3 text-left">PacNo</th><th class="px-4 py-3 text-left">PacEdad</th>
-            <th class="px-4 py-3 text-left">PacCiudad</th><th class="px-4 py-3 text-left">ProvNo</th>
-            <th class="px-4 py-3 text-left">ProvEspecialidad</th><th class="px-4 py-3 text-left">Diagnostico</th>
-          </tr></thead>
-          <tbody class="divide-y divide-zinc-800">
-            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">V10020</td><td class="px-4 py-2">1/13/2019</td><td class="px-4 py-2">P1</td><td class="px-4 py-2">35</td><td class="px-4 py-2">Bogotá</td><td class="px-4 py-2">D1</td><td class="px-4 py-2">Internista</td><td class="px-4 py-2">Infección de oído</td></tr>
-            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">V10020</td><td class="px-4 py-2">1/13/2019</td><td class="px-4 py-2">P1</td><td class="px-4 py-2">35</td><td class="px-4 py-2">Bogotá</td><td class="px-4 py-2">D2</td><td class="px-4 py-2">Prac. Enfermería</td><td class="px-4 py-2">Influenza</td></tr>
-            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">V93030</td><td class="px-4 py-2">1/20/2019</td><td class="px-4 py-2">P3</td><td class="px-4 py-2">17</td><td class="px-4 py-2">Cali</td><td class="px-4 py-2">D2</td><td class="px-4 py-2">Prac. Enfermería</td><td class="px-4 py-2">Embarazo</td></tr>
-            <tr class="hover:bg-zinc-800/50"><td class="px-4 py-2">V82110</td><td class="px-4 py-2">1/18/2019</td><td class="px-4 py-2">P2</td><td class="px-4 py-2">60</td><td class="px-4 py-2">Cúcuta</td><td class="px-4 py-2">D3</td><td class="px-4 py-2">Cardiólogo</td><td class="px-4 py-2">Soplo cardíaco</td></tr>
-          </tbody>
-        </table>
+      <p class="text-zinc-400 text-sm mb-3">Averiguar el nombre de todos los empleados que viven en la <strong class="text-white">misma ciudad</strong> que la universidad para la que trabajan.</p>
+      <div class="bg-zinc-800/50 border border-zinc-700 rounded-xl p-4 font-mono text-xs text-emerald-300 leading-relaxed">
+        π <span class="text-white">nombre_empleado</span> (σ <span class="text-amber-300">ciudad = ciudad_uni</span> (empleado ⋈ (trabaja ⋈ (ρ<sub class="text-zinc-400">uni(ciudad_uni)</sub>(Universidad)))))
       </div>
-
-      <!-- Forma normal -->
-      <div class="bg-amber-500/10 border border-amber-500/30 rounded-xl p-5 mb-6">
-        <p class="text-amber-300 font-semibold text-sm mb-2">📌 Forma normal actual: 1FN</p>
-        <p class="text-zinc-300 text-sm leading-relaxed">
-          La clave primaria compuesta es <span class="font-mono text-indigo-300 text-xs bg-zinc-800 px-1 rounded">(VisitaNo, ProvNo)</span>.
-          Todos los atributos son atómicos (1FN ✓). Sin embargo, existen <strong class="text-white">dependencias parciales</strong>:
-          <span class="font-mono text-amber-300 text-xs bg-zinc-800 px-1 rounded">PacNo, DiaVisita, PacEdad, PacCiudad</span> dependen solo de <span class="font-mono text-xs bg-zinc-800 px-1 rounded">VisitaNo</span>, y
-          <span class="font-mono text-amber-300 text-xs bg-zinc-800 px-1 rounded">ProvEspecialidad</span> depende solo de <span class="font-mono text-xs bg-zinc-800 px-1 rounded">ProvNo</span>.
-          Por eso <strong class="text-white">NO está en 2FN</strong>, y menos en 3FN. Adicionalmente hay dependencia transitiva:
-          <span class="font-mono text-xs bg-zinc-800 px-1 rounded">VisitaNo → PacNo → PacEdad, PacCiudad</span>.
-        </p>
-      </div>
-
-      <!-- Esquema relacional -->
-      <p class="text-zinc-400 text-xs uppercase tracking-widest mb-3">Esquema relacional Tabla No. 2</p>
-      <div class="bg-zinc-800/60 rounded-xl p-4 font-mono text-xs text-zinc-300 mb-6 border border-zinc-700">
-        <p>VISITA_MEDICA(<span class="text-yellow-300">VisitaNo</span>, <span class="text-yellow-300">ProvNo</span>, DiaVisita, PacNo, PacEdad, PacCiudad, ProvEspecialidad, Diagnostico)</p>
-        <p class="text-zinc-500 mt-1">// PK: (VisitaNo, ProvNo)</p>
-      </div>
-
-      <!-- Diagrama DF -->
-      <p class="text-zinc-400 text-xs uppercase tracking-widest mb-4">Diagrama de dependencias funcionales</p>
-      <div class="bg-zinc-800/40 rounded-xl border border-zinc-700 p-6 mb-6 text-xs font-mono text-zinc-300 leading-loose">
-        <p class="text-indigo-300 font-bold mb-3">(VisitaNo, ProvNo) ← Clave primaria compuesta</p>
-        <p>VisitaNo ───────────→ DiaVisita, PacNo, PacEdad, PacCiudad <span class="text-amber-400">(dep. parcial)</span></p>
-        <p>ProvNo ─────────────→ ProvEspecialidad <span class="text-amber-400">(dep. parcial)</span></p>
-        <p>PacNo ──────────────→ PacEdad, PacCiudad <span class="text-orange-400">(dep. transitiva vía VisitaNo)</span></p>
-        <p>(VisitaNo, ProvNo) ─→ Diagnostico <span class="text-emerald-400">(dep. completa ✓)</span></p>
-      </div>
-
-      <!-- Proceso normalización -->
-      <p class="text-zinc-400 text-xs uppercase tracking-widest mb-4">Conversión a 3FN</p>
-
-      <div class="border border-zinc-700 rounded-xl p-5 mb-4">
-        <p class="text-white font-semibold text-sm mb-3">2FN — Eliminar dependencias parciales</p>
-        <div class="grid md:grid-cols-3 gap-3">
-          <div class="bg-zinc-800 rounded-lg p-4">
-            <p class="text-indigo-300 text-xs font-semibold mb-2 uppercase">VISITAS</p>
-            <p class="text-xs font-mono"><span class="text-yellow-400">VisitaNo</span> (PK)</p>
-            <p class="text-xs font-mono">DiaVisita</p>
-            <p class="text-xs font-mono"><span class="text-blue-400">PacNo</span> (FK)</p>
-            <p class="text-xs font-mono">PacEdad</p>
-            <p class="text-xs font-mono">PacCiudad</p>
-          </div>
-          <div class="bg-zinc-800 rounded-lg p-4">
-            <p class="text-indigo-300 text-xs font-semibold mb-2 uppercase">PROVEEDORES</p>
-            <p class="text-xs font-mono"><span class="text-yellow-400">ProvNo</span> (PK)</p>
-            <p class="text-xs font-mono">ProvEspecialidad</p>
-          </div>
-          <div class="bg-zinc-800 rounded-lg p-4">
-            <p class="text-indigo-300 text-xs font-semibold mb-2 uppercase">DIAGNOSTICOS</p>
-            <p class="text-xs font-mono"><span class="text-yellow-400">VisitaNo</span> (PK, FK)</p>
-            <p class="text-xs font-mono"><span class="text-yellow-400">ProvNo</span> (PK, FK)</p>
-            <p class="text-xs font-mono">Diagnostico</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="border border-zinc-700 rounded-xl p-5 mb-4">
-        <p class="text-white font-semibold text-sm mb-3">3FN — Eliminar dependencia transitiva en VISITAS</p>
-        <p class="text-zinc-300 text-sm mb-3">
-          En la tabla VISITAS: <span class="font-mono text-xs bg-zinc-800 px-1 rounded">VisitaNo → PacNo → PacEdad, PacCiudad</span>.
-          PacEdad y PacCiudad dependen del paciente, no de la visita directamente. Se extraen:
-        </p>
-        <div class="grid md:grid-cols-2 gap-3">
-          <div class="bg-zinc-800 rounded-lg p-4">
-            <p class="text-emerald-400 text-xs font-semibold mb-2 uppercase">PACIENTES ✓</p>
-            <p class="text-xs font-mono"><span class="text-yellow-400">PacNo</span> (PK)</p>
-            <p class="text-xs font-mono">PacEdad</p>
-            <p class="text-xs font-mono">PacCiudad</p>
-          </div>
-          <div class="bg-zinc-800 rounded-lg p-4">
-            <p class="text-emerald-400 text-xs font-semibold mb-2 uppercase">VISITAS ✓</p>
-            <p class="text-xs font-mono"><span class="text-yellow-400">VisitaNo</span> (PK)</p>
-            <p class="text-xs font-mono">DiaVisita</p>
-            <p class="text-xs font-mono"><span class="text-blue-400">PacNo</span> (FK → PACIENTES)</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="bg-zinc-800/40 rounded-xl border border-zinc-700 p-5 mb-4">
-        <p class="text-emerald-400 text-xs font-semibold mb-3 uppercase">Esquema final en 3FN — 4 tablas</p>
-        <div class="grid md:grid-cols-2 gap-2 font-mono text-xs text-zinc-300">
-          <p>PACIENTES(<span class="text-yellow-300">PacNo</span>, PacEdad, PacCiudad)</p>
-          <p>PROVEEDORES(<span class="text-yellow-300">ProvNo</span>, ProvEspecialidad)</p>
-          <p>VISITAS(<span class="text-yellow-300">VisitaNo</span>, DiaVisita, <span class="text-blue-400">PacNo</span>)</p>
-          <p>DIAGNOSTICOS(<span class="text-yellow-300">VisitaNo</span>, <span class="text-yellow-300">ProvNo</span>, Diagnostico)</p>
-        </div>
-      </div>
-      <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-3 text-xs text-emerald-200">
-        ✅ Cada atributo no clave depende directa y únicamente de la llave primaria de su tabla. Esquema en <strong>3FN</strong>.
+      <div class="mt-3 bg-zinc-800/30 rounded-lg p-3 text-xs text-zinc-400 border border-zinc-800">
+        <span class="text-zinc-300 font-semibold">Explicación: </span>
+        Se renombra la ciudad de Universidad como <span class="font-mono text-xs bg-zinc-800 px-1 rounded">ciudad_uni</span> para distinguirla de la ciudad del empleado. Tras el join se seleccionan las filas donde ambas ciudades coincidan.
       </div>
     </div>
 
-    <!-- ─────────────────────────────────────────────────────
-         EJERCICIO 5 — NETFLIX RENTALS / BCNF
-    ───────────────────────────────────────────────────── -->
-    <div class="mb-16">
-      <div class="flex items-center gap-3 mb-6">
-        <span class="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 text-xs font-semibold uppercase tracking-wider">Ejercicio 5</span>
-        <h3 class="text-xl font-semibold text-white">Netflix DVD Rentals — 3FN y BCNF</h3>
+    <!-- EJ 5 -->
+    <div class="mb-10">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="px-3 py-1 rounded-full bg-teal-500/20 text-teal-300 text-xs font-semibold uppercase tracking-wider">Ejercicio 5</span>
+        <h3 class="text-base font-semibold text-white">Empleados que viven en la misma ciudad y calle que su jefe</h3>
       </div>
-
-      <div class="overflow-x-auto rounded-xl border border-zinc-700 mb-5">
-        <table class="w-full text-xs text-zinc-300">
-          <thead><tr class="bg-zinc-800 text-cyan-300 uppercase tracking-wider">
-            <th class="px-3 py-3 text-left">RentalID</th><th class="px-3 py-3 text-left">Title</th>
-            <th class="px-3 py-3 text-left">CustomerID</th><th class="px-3 py-3 text-left">MailedOutDate</th>
-            <th class="px-3 py-3 text-left">Director</th><th class="px-3 py-3 text-left">MovieCategory</th>
-            <th class="px-3 py-3 text-left">Price</th>
-          </tr></thead>
-          <tbody class="divide-y divide-zinc-800">
-            <tr class="hover:bg-zinc-800/50"><td class="px-3 py-2">1</td><td class="px-3 py-2">Die Hard</td><td class="px-3 py-2">1001</td><td class="px-3 py-2">3/3/2010</td><td class="px-3 py-2">John McTiernan</td><td class="px-3 py-2">Old</td><td class="px-3 py-2">$4.25</td></tr>
-            <tr class="hover:bg-zinc-800/50"><td class="px-3 py-2">1</td><td class="px-3 py-2">The Last Man Standing</td><td class="px-3 py-2">1001</td><td class="px-3 py-2">3/3/2010</td><td class="px-3 py-2">Walter Hill</td><td class="px-3 py-2">Old</td><td class="px-3 py-2">$4.25</td></tr>
-            <tr class="hover:bg-zinc-800/50"><td class="px-3 py-2">1</td><td class="px-3 py-2">Wedding Crashers</td><td class="px-3 py-2">1001</td><td class="px-3 py-2">3/3/2010</td><td class="px-3 py-2">David Dobkin</td><td class="px-3 py-2">New</td><td class="px-3 py-2">$5.50</td></tr>
-            <tr class="hover:bg-zinc-800/50"><td class="px-3 py-2">2</td><td class="px-3 py-2">Dodgeball</td><td class="px-3 py-2">1002</td><td class="px-3 py-2">3/4/2010</td><td class="px-3 py-2">Rawson M. Thurber</td><td class="px-3 py-2">New</td><td class="px-3 py-2">$5.50</td></tr>
-            <tr class="hover:bg-zinc-800/50"><td class="px-3 py-2">2</td><td class="px-3 py-2">Die Hard</td><td class="px-3 py-2">1002</td><td class="px-3 py-2">3/4/2010</td><td class="px-3 py-2">John McTiernan</td><td class="px-3 py-2">Old</td><td class="px-3 py-2">$4.25</td></tr>
-            <tr class="hover:bg-zinc-800/50"><td class="px-3 py-2">3</td><td class="px-3 py-2">As Good as It Gets</td><td class="px-3 py-2">1003</td><td class="px-3 py-2">1/7/2011</td><td class="px-3 py-2">James Brooks</td><td class="px-3 py-2">Old</td><td class="px-3 py-2">$4.25</td></tr>
-            <tr class="hover:bg-zinc-800/50"><td class="px-3 py-2">4</td><td class="px-3 py-2">Forrest Gump</td><td class="px-3 py-2">1001</td><td class="px-3 py-2">1/7/2011</td><td class="px-3 py-2">Robert Zemeckis</td><td class="px-3 py-2">Old</td><td class="px-3 py-2">$4.25</td></tr>
-          </tbody>
-        </table>
+      <p class="text-zinc-400 text-sm mb-3">Averiguar el nombre de todos los empleados que viven en la <strong class="text-white">misma ciudad y misma calle</strong> que sus jefes.</p>
+      <div class="bg-zinc-800/50 border border-zinc-700 rounded-xl p-4 font-mono text-xs text-emerald-300 leading-relaxed">
+        π <span class="text-white">nombre_empleado</span> (σ <span class="text-amber-300">ciudad = ciudad_jefe ∧ calle = calle_jefe</span> (empleado × (ρ<sub class="text-zinc-400">J(cod_jefe, nombre_jefe, calle_jefe, ciudad_jefe)</sub>(jefe))))
       </div>
-
-      <!-- Verificación dependencias -->
-      <p class="text-zinc-400 text-xs uppercase tracking-widest mb-3">a. Verificación de dependencias funcionales</p>
-      <div class="space-y-3 mb-6">
-        <div class="bg-zinc-800/60 rounded-xl p-4 border border-zinc-700">
-          <p class="text-cyan-300 text-xs font-semibold mb-1">i. RentalID → CustomerID ✅ VERDADERA</p>
-          <p class="text-zinc-300 text-xs leading-relaxed">Para cada RentalID el CustomerID es siempre el mismo (RentalID=1 → siempre 1001; RentalID=2 → siempre 1002). Un alquiler pertenece a un único cliente.</p>
-        </div>
-        <div class="bg-zinc-800/60 rounded-xl p-4 border border-zinc-700">
-          <p class="text-cyan-300 text-xs font-semibold mb-1">ii. RentalID → CustomerID (repetida) ✅ VERDADERA</p>
-          <p class="text-zinc-300 text-xs leading-relaxed">Misma justificación. Es una dependencia parcial respecto a la PK compuesta (RentalID, Title), dado que CustomerID depende solo de RentalID.</p>
-        </div>
-        <div class="bg-zinc-800/60 rounded-xl p-4 border border-zinc-700">
-          <p class="text-red-400 text-xs font-semibold mb-1">iii. Director → Title ❌ FALSA</p>
-          <p class="text-zinc-300 text-xs leading-relaxed">John McTiernan dirigió tanto "Die Hard" como potencialmente otras películas. Un director puede haber dirigido múltiples títulos. La dependencia no se sostiene.</p>
-        </div>
-      </div>
-
-      <!-- Esquema relacional -->
-      <p class="text-zinc-400 text-xs uppercase tracking-widest mb-3">b. Esquema relacional tabla "Rentals"</p>
-      <div class="bg-zinc-800/60 rounded-xl p-4 font-mono text-xs text-zinc-300 mb-5 border border-zinc-700">
-        <p>RENTALS(<span class="text-yellow-300">RentalID</span>, <span class="text-yellow-300">Title</span>, CustomerID, MailedOutDate, Director, MovieCategory, Price)</p>
-        <p class="text-zinc-500 mt-1">// PK: (RentalID, Title)</p>
-      </div>
-
-      <!-- Dependencias funcionales -->
-      <p class="text-zinc-400 text-xs uppercase tracking-widest mb-3">c. Dependencias funcionales</p>
-      <div class="grid sm:grid-cols-2 gap-2 font-mono text-xs text-zinc-300 mb-5">
-        <div class="bg-zinc-800 rounded-lg px-3 py-2">RentalID → CustomerID, MailedOutDate <span class="text-amber-400">(parcial)</span></div>
-        <div class="bg-zinc-800 rounded-lg px-3 py-2">Title → Director, MovieCategory <span class="text-amber-400">(parcial)</span></div>
-        <div class="bg-zinc-800 rounded-lg px-3 py-2">MovieCategory → Price <span class="text-orange-400">(transitiva)</span></div>
-        <div class="bg-zinc-800 rounded-lg px-3 py-2">(RentalID, Title) → todos los atributos <span class="text-emerald-400">(PK)</span></div>
-      </div>
-
-      <!-- Diagrama DF -->
-      <p class="text-zinc-400 text-xs uppercase tracking-widest mb-3">d. Diagrama de dependencias funcionales (1FN)</p>
-      <div class="bg-zinc-800/40 rounded-xl border border-zinc-700 p-6 mb-6 text-xs font-mono text-zinc-300 leading-loose">
-        <p class="text-cyan-300 font-bold mb-3">(RentalID, Title) ← PK compuesta</p>
-        <p>RentalID ──────────→ CustomerID, MailedOutDate <span class="text-amber-400">(dep. parcial)</span></p>
-        <p>Title ─────────────→ Director, MovieCategory <span class="text-amber-400">(dep. parcial)</span></p>
-        <p>MovieCategory ────→ Price <span class="text-orange-400">(dep. transitiva)</span></p>
-        <p>(RentalID, Title) ─→ (ningún atributo propio adicional) <span class="text-emerald-400">(dep. completa)</span></p>
-      </div>
-
-      <!-- 3FN -->
-      <p class="text-zinc-400 text-xs uppercase tracking-widest mb-4">e. Descomposición en 3FN</p>
-      <div class="grid md:grid-cols-3 gap-3 mb-4">
-        <div class="bg-zinc-800 rounded-lg p-4">
-          <p class="text-cyan-300 text-xs font-semibold mb-2 uppercase">CUSTOMERS</p>
-          <p class="text-xs font-mono"><span class="text-yellow-400">CustomerID</span> (PK)</p>
-          <p class="text-xs font-mono text-zinc-500">// (otros datos del cliente)</p>
-        </div>
-        <div class="bg-zinc-800 rounded-lg p-4">
-          <p class="text-cyan-300 text-xs font-semibold mb-2 uppercase">MOVIES</p>
-          <p class="text-xs font-mono"><span class="text-yellow-400">Title</span> (PK)</p>
-          <p class="text-xs font-mono">Director</p>
-          <p class="text-xs font-mono"><span class="text-blue-400">MovieCategory</span> (FK)</p>
-        </div>
-        <div class="bg-zinc-800 rounded-lg p-4">
-          <p class="text-cyan-300 text-xs font-semibold mb-2 uppercase">CATEGORIES</p>
-          <p class="text-xs font-mono"><span class="text-yellow-400">MovieCategory</span> (PK)</p>
-          <p class="text-xs font-mono">Price</p>
-        </div>
-      </div>
-      <div class="bg-zinc-800 rounded-lg p-4 max-w-sm mb-4">
-        <p class="text-cyan-300 text-xs font-semibold mb-2 uppercase">RENTALS</p>
-        <p class="text-xs font-mono"><span class="text-yellow-400">RentalID</span> (PK)</p>
-        <p class="text-xs font-mono"><span class="text-yellow-400">Title</span> (PK, FK → MOVIES)</p>
-        <p class="text-xs font-mono"><span class="text-blue-400">CustomerID</span> (FK → CUSTOMERS)</p>
-        <p class="text-xs font-mono">MailedOutDate</p>
-      </div>
-
-      <!-- BCNF -->
-      <p class="text-zinc-400 text-xs uppercase tracking-widest mb-4">f. ¿Qué cambiaría para BCNF?</p>
-      <div class="bg-zinc-800/40 rounded-xl border border-zinc-700 p-5 mb-4">
-        <p class="text-zinc-300 text-sm leading-relaxed mb-3">
-          La diferencia entre 3FN y BCNF ocurre cuando existe una dependencia funcional donde el
-          determinante <strong class="text-white">no es una llave candidata</strong>. En este caso particular,
-          el esquema en 3FN ya es equivalente al de BCNF porque:
-        </p>
-        <ul class="list-disc pl-5 text-zinc-300 text-sm space-y-1">
-          <li>En MOVIES: <span class="font-mono text-xs bg-zinc-800 px-1 rounded">Title → Director, MovieCategory</span> — Title es PK ✓</li>
-          <li>En CATEGORIES: <span class="font-mono text-xs bg-zinc-800 px-1 rounded">MovieCategory → Price</span> — MovieCategory es PK ✓</li>
-          <li>En RENTALS: <span class="font-mono text-xs bg-zinc-800 px-1 rounded">RentalID → CustomerID, MailedOutDate</span> — RentalID es PK ✓</li>
-        </ul>
-        <p class="text-zinc-300 text-sm mt-3">
-          Todos los determinantes son llaves candidatas, por lo que <strong class="text-cyan-300">el esquema en 3FN ya cumple BCNF</strong> sin cambios adicionales.
-          Si existiera una situación donde <span class="font-mono text-xs bg-zinc-800 px-1 rounded">Director → MovieCategory</span> fuera válida
-          (un director siempre trabaja en el mismo género), se requeriría separar adicionalmente; pero los datos no lo evidencian.
-        </p>
-      </div>
-      <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-3 text-xs text-emerald-200">
-        ✅ Las 4 tablas resultantes cumplen tanto <strong>3FN</strong> como <strong>BCNF</strong>.
+      <div class="mt-3 bg-zinc-800/30 rounded-lg p-3 text-xs text-zinc-400 border border-zinc-800">
+        <span class="text-zinc-300 font-semibold">Explicación: </span>
+        Se usa <strong class="text-white">producto cartesiano (×)</strong> entre empleado y jefe (renombrado para evitar colisión de atributos). Luego la selección filtra los pares donde coincidan ciudad y calle simultáneamente. No se usa join natural porque no hay clave común directa entre ambas tablas.
       </div>
     </div>
 
-    <!-- ─────────────────────────────────────────────────────
-         EJERCICIO 6 — REFLEXIÓN
-    ───────────────────────────────────────────────────── -->
+    <!-- EJ 6 -->
+    <div class="mb-10">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="px-3 py-1 rounded-full bg-teal-500/20 text-teal-300 text-xs font-semibold uppercase tracking-wider">Ejercicio 6</span>
+        <h3 class="text-base font-semibold text-white">Empleados que NO trabajan para la Universidad Central</h3>
+      </div>
+      <p class="text-zinc-400 text-sm mb-3">Averiguar el nombre de todos los empleados que <strong class="text-white">no trabajan</strong> para la Universidad Central.</p>
+      <div class="bg-zinc-800/50 border border-zinc-700 rounded-xl p-4 font-mono text-xs text-emerald-300 leading-relaxed">
+        π <span class="text-white">nombre_empleado</span> (empleado) <span class="text-red-400">−</span> π <span class="text-white">nombre_empleado</span> (empleado ⋈ trabaja ⋈ (σ <span class="text-amber-300">nombre_uni = 'Universidad Central'</span> (Universidad)))
+      </div>
+      <div class="mt-3 bg-zinc-800/30 rounded-lg p-3 text-xs text-zinc-400 border border-zinc-800">
+        <span class="text-zinc-300 font-semibold">Explicación: </span>
+        Se usa la operación de <strong class="text-white">diferencia (−)</strong>: al conjunto de todos los empleados se le resta el subconjunto de los que sí trabajan en la Universidad Central. El resultado son quienes no tienen relación con ella.
+      </div>
+    </div>
+
+    <!-- EJ 7 -->
+    <div class="mb-10">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="px-3 py-1 rounded-full bg-teal-500/20 text-teal-300 text-xs font-semibold uppercase tracking-wider">Ejercicio 7</span>
+        <h3 class="text-base font-semibold text-white">Empleados que ganan más que cualquier empleado de Los Andes</h3>
+      </div>
+      <p class="text-zinc-400 text-sm mb-3">Averiguar el nombre de todos los empleados que ganan <strong class="text-white">más que cualquier empleado</strong> de la Universidad de Los Andes.</p>
+
+      <div class="bg-zinc-800/50 border border-zinc-700 rounded-xl p-4 font-mono text-xs text-emerald-300 leading-relaxed mb-2">
+        MIN (sueldo_mensual)(empleado)
+      </div>
+    </div>
+
+    <!-- EJ 8 -->
     <div class="mb-4">
-      <div class="flex items-center gap-3 mb-6">
-        <span class="px-3 py-1 rounded-full bg-rose-500/20 text-rose-300 text-xs font-semibold uppercase tracking-wider">Ejercicio 6</span>
-        <h3 class="text-xl font-semibold text-white">Reflexión: Diseño E-R y Normalización</h3>
+      <div class="flex items-center gap-3 mb-4">
+        <span class="px-3 py-1 rounded-full bg-teal-500/20 text-teal-300 text-xs font-semibold uppercase tracking-wider">Ejercicio 8</span>
+        <h3 class="text-base font-semibold text-white">Universidades en cada ciudad donde está la Universidad Nacional</h3>
+      </div>
+      <p class="text-zinc-400 text-sm mb-3">Como la Universidad Nacional de Colombia está en varias ciudades, hallar todas las universidades instaladas en <strong class="text-white">cada ciudad</strong> donde también está la Nacional.</p>
+      <div class="bg-zinc-800/50 border border-zinc-700 rounded-xl p-4 font-mono text-xs text-emerald-300 leading-relaxed">
+        π <span class="text-white">nombre_uni, ciudad_uni</span> (Universidad) <span class="text-cyan-400">÷</span> π <span class="text-white">ciudad_uni</span> (σ <span class="text-amber-300">nombre_uni = 'Universidad Nacional de Colombia'</span> (Universidad))
+      </div>
+      <div class="mt-3 bg-zinc-800/30 rounded-lg p-3 text-xs text-zinc-400 border border-zinc-800">
+        <span class="text-zinc-300 font-semibold">Explicación: </span>
+        Se usa la operación de <strong class="text-white">división (÷)</strong>. El dividendo son todos los pares (nombre_uni, ciudad_uni); el divisor son las ciudades de la Nacional. El resultado son las universidades que aparecen en <em>todas</em> esas ciudades simultáneamente.
       </div>
 
-      <div class="space-y-5 text-zinc-300 text-sm leading-relaxed">
-
-        <div class="border-l-2 border-rose-500 pl-4">
-          <p class="text-white font-semibold mb-1">El diseño E-R como punto de partida</p>
-          <p>
-            Un buen diseño Entidad-Relación y la normalización no son procesos independientes,
-            sino complementarios. El modelo E-R define conceptualmente las entidades, sus atributos y
-            las relaciones entre ellas, estableciendo una estructura lógica del dominio del problema.
-            La normalización, por su parte, actúa como una verificación formal de que esa estructura
-            no introduce redundancias ni anomalías en los datos.
-          </p>
-        </div>
-
-        <div class="border-l-2 border-fuchsia-500 pl-4">
-          <p class="text-white font-semibold mb-1">Cuando el E-R está bien hecho, la normalización es casi automática</p>
-          <p>
-            Si en el modelo E-R cada entidad representa un único concepto del mundo real y sus atributos
-            describen únicamente esa entidad, las tablas resultantes de la reducción al modelo relacional
-            ya tienden a estar en 2FN o 3FN de forma natural. Por ejemplo, en el ejercicio de transportes:
-            si CONDUCTOR, PAQUETE y CAMIÓN se modelan como entidades separadas desde el inicio, no surgirán
-            dependencias parciales al momento de implementar. El error de mezclar atributos de varias
-            entidades en una sola tabla (como en la Tabla No. 1 del taller) es precisamente resultado de
-            un diseño E-R deficiente.
-          </p>
-        </div>
-
-        <div class="border-l-2 border-violet-500 pl-4">
-          <p class="text-white font-semibold mb-1">Las dependencias funcionales reflejan las reglas del negocio</p>
-          <p>
-            Las dependencias funcionales que se identifican durante la normalización no son arbitrarias:
-            provienen directamente de las restricciones del dominio que ya debieron haberse capturado en
-            el modelo E-R. Por ejemplo, que <span class="font-mono text-xs bg-zinc-800 px-1 rounded">ProvNo → ProvEspecialidad</span>
-            significa que un proveedor tiene una sola especialidad, lo cual debió modelarse con una relación
-            directa entre PROVEEDOR y ESPECIALIDAD en el E-R. Cuando una dependencia funcional sorprende
-            durante la normalización, generalmente indica que el E-R original omitió una entidad o una restricción.
-          </p>
-        </div>
-
-        <div class="border-l-2 border-cyan-500 pl-4">
-          <p class="text-white font-semibold mb-1">La normalización como auditoría del E-R</p>
-          <p>
-            La normalización puede entenderse como una auditoría formal del diseño E-R.
-            Si al normalizar una tabla resultante de la reducción del E-R se encuentran muchas anomalías
-            (dependencias parciales, transitivas, multivaluados), es una señal de que el modelo conceptual
-            debe revisarse. Por el contrario, un E-R bien construido produce tablas que superan fácilmente
-            el proceso de normalización, minimizando el trabajo de refactorización.
-          </p>
-        </div>
-
-        <div class="border-l-2 border-emerald-500 pl-4">
-          <p class="text-white font-semibold mb-1">Conclusión</p>
-          <p>
-            El diseño E-R y la normalización son dos caras de la misma moneda: el primero modela
-            la realidad en términos de entidades y relaciones, y la segunda garantiza que esa modelación
-            se traduzca en estructuras de datos eficientes, sin redundancias y con integridad garantizada.
-            Invertir tiempo en un buen diseño E-R reduce drásticamente los problemas de normalización,
-            mientras que el conocimiento profundo de las formas normales retroalimenta y mejora la
-            calidad del diseño conceptual.
-          </p>
-        </div>
-
-      </div>
     </div>
 
   </div>
 </div>
-</div>
-</section>
-
-</DefaultLayout>

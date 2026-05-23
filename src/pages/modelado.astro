@@ -5,6 +5,9 @@ import { Image } from 'astro:assets'
 import aerolinea from '@assets/img/aerolinea.drawio.png'
 import residuos from '@assets/img/Residuos.png'
 import comidas from '@assets/img/comidas.png'
+import imagen1 from '@assets/img/enunciado1.png'
+import imagen2 from '@assets/img/enunciado2.png'
+import imagen3 from '@assets/img/enunciado3.png'
 ---
 
 <DefaultLayout title="Modelado - Einny Camyla">
@@ -271,6 +274,30 @@ import comidas from '@assets/img/comidas.png'
         </p>
 
       </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-10">
+    <div class="bg-white p-4 rounded-xl shadow-lg">
+    <Image
+      src={imagen1}
+      alt="Enunciado parte 1"
+      class="w-full rounded-lg object-contain"/>
+    </div>
+
+    <div class="bg-white p-4 rounded-xl shadow-lg">
+      <Image
+        src={imagen2}
+        alt="Enunciado parte 2"
+        class="w-full rounded-lg object-contain"/>
+    </div>
+
+    <div class="bg-white p-4 rounded-xl shadow-lg">
+      <Image
+        src={imagen3}
+        alt="Enunciado parte 3"
+        class="w-full rounded-lg object-contain"/>
+    </div>
+
     </div>
 
   </section>
